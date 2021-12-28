@@ -1,0 +1,18 @@
+/*Identificadores de Ambientes*/
+.warning {
+    text-align: center;
+    font-size: 10px;
+    position: fixed;
+    right: 0;
+    padding: 5px 10px;
+}
+
+.dev {
+    background-color: crimson;
+    color: #fff;
+}
+
+.staging {
+    background-color: darkgoldenrod;
+    color: #fff;
+}
