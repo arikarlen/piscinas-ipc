@@ -1,15 +1,18 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import LogoHeader from "../../assets/LogoIPCWhite.svg";
+import LogoHeaderBlue from "../../assets/LogoIPCBlue.svg";
 import Accesorios from "./Header/accesorios";
 import Piscinas from "./Header/piscinas";
 
 export const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark  fixed-top">
+    <nav
+      className="navbar navbar-expand-lg navbar-dark  fixed-top"
+      id="headerFixed"
+    >
       <Container>
         <a className="navbar-brand" href="#">
-          <img src={LogoHeader} />
+          <img src={LogoHeaderBlue} />
         </a>
         <button
           className="navbar-toggler"
@@ -57,7 +60,7 @@ export const Header = () => {
                 Contacto
               </a>
             </li>
-            <li className="nav-item btn-presupuestar">
+            <li className="nav-item btn-presupuestar ">
               <a className="nav-link" href="#">
                 Presupuestar
               </a>
