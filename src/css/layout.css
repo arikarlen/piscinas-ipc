@@ -26,21 +26,29 @@
     --color-main: #054172;
     --color-secondary: #0071e3;
     --color-black: #231f20;
+    --color-white-full:#fff;
     --color-white:#fafbff;
     --color-brown: #746050;
     --color-grey:#777;
     --color-dark-grey:#262626;
-
+    /*Transitions*/
     --standar-transition: 0.3s ease-in all;
-    --fast-transition: 0.1s ease-in all
-    
+    --fast-transition: 0.1s ease-in all;
+    /*Cards*/
+    --card-radius: 8px;
+    --card-shadow: 0 0 16px 0 rgb(0 0 0 / 8%);
+    --card-shadow-hover: 0 0 16px 0 rgb(0 0 0 / 24%) !important;
+    --card-padding: 20px 22px;
 }
+
+
 
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 14px;
     background-color: var(--color-white);
+    color:var(--color-grey)
 }
 
 a {
@@ -62,7 +70,7 @@ p {
     font-family: 'Open Sans', sans-serif;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: 'Prompt';
      font-stretch: normal;
     font-style: normal;
@@ -92,8 +100,57 @@ h3 {
    line-height: 38px;
 }
 
+h4 {
+   
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: normal;
+}
+
+h5 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19px!important;
+    font-weight: normal!important;
+    font-stretch: normal;
+    font-style: normal!important;
+    line-height: 24px;
+    letter-spacing: normal;
+}
+
 ul {
     padding: 0;
+}
+
+.backsHome {
+    position: relative;
+    background-color: var(--color-white);
+}
+
+.cardsIpc {
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+    background-color: var(--color-white-full);
+    padding: var(--card-padding);
+    transition: var(--standar-transition);
+}
+
+.subtitulo {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.text-white {
+    color:#fff
+}
+
+@keyframes pulse {
+0% {
+    box-shadow:  var(--color-secondary) 0 0 0 0;
+}
+75% {
+    box-shadow: #ff69b400 0 0 0 16px;
+}
 }
 
 /****Menu*/
@@ -118,6 +175,12 @@ ul {
 
 }
 
+.navbar-brand img {
+    width: 70%;
+    filter: brightness(0) invert(1);
+    transition: var(--fast-transition);
+}
+
 li.nav-item {
     margin: 0 40px 0 0;
 }
@@ -127,6 +190,7 @@ li.nav-item {
     border-radius: 40px;
     padding: 0 30px;
     transition: var(--standar-transition);
+    animation: pulse 1500ms infinite;
 }
 
 .btn-presupuestar a:before {
@@ -213,7 +277,20 @@ i {
     background-color: var(--color-brown);
 }
 
+.changeColor {
+    background-color: #fff;
+}
 
+.changeColor  .nav-link {
+    color:var(--color-main)!important;
+    transition: var(--standar-transition);
+}
+
+.changeColor .navbar-brand img {
+    width: 40%;
+    filter: none;
+    transition: var(--fast-transition);
+}
 
 /*************Slider*/
 #videoContainer {
@@ -223,7 +300,7 @@ i {
 
 #videoLayer {
     padding: 0;
-    position: absolute;
+    position: fixed;
     top:-180px
 }
 
@@ -235,6 +312,7 @@ i {
 	padding-top: 30px;
 	position: relative;
 	}
+
 .video-responsive iframe, .video-responsive object, .video-responsive embed {
 	height: 100%;
 	left: 0;
@@ -244,17 +322,86 @@ i {
 	}
 
 
-    /****Wave*/
+/*************Wave*/
 
 
-    #wave {
-        
-        background: url(../assets/Waveblanca-01.svg) no-repeat;
-        position: relative!important;
-        height: 280px;
-       
-        background-size: cover;
-        z-index: 9999 !important;
-        bottom: 0px !important;
-        margin-top: 550px;
+#wave {
+     background: url(../assets/Waveblanca-01.svg) no-repeat;
+    position: relative!important;
+    height: 280px;
+    background-size: cover;
+    bottom: 0px !important;
+    margin-top: 550px;
     } 
+
+
+/*************Cinta*/
+   
+img.iconCinta {
+    width: 17%!important;
+    float: left;
+    margin: 0 20px 0 0;
+    }
+
+/***********Nuestras piscinas*/
+
+#nuestrasPiscinas {
+    padding-top: 90px;
+    padding: 90px 0;
+}
+
+#contentPiscinas {
+    margin: 90px 0 0 0;
+}
+
+#contentPiscinas .cardsIpc:hover {
+    box-shadow: var(--card-shadow-hover);
+    transition: var(--standar-transition);
+    
+}
+
+
+
+#contentPiscinas .cardMedium {
+    margin: 0 2%;
+}
+
+#contentPiscinas img {
+    width: 50%;
+    margin-bottom: 50px;
+    transition: var(--standar-transition);
+}
+
+#contentPiscinas .cardsIpc:hover img{
+    width: 55%;
+    transition: var(--standar-transition);
+}
+
+#contentPiscinas .cardsIpc {
+    padding: 30px 20px 10px 20px;
+    height: 250px;
+    max-height: 250px;
+}
+
+
+/*****Slide componentes*/
+
+#slideComponents {
+    background-color: var(--color-secondary);
+    padding: 0;
+}
+#slideComponents h2 {
+    color:#fff;
+    text-align: left;
+}
+
+.titleSlide {
+    padding: 4% 6% 0 6%;
+}
+
+.carousel-caption {
+    right: 20%;
+    left: 20%;
+    top: 10%;
+    text-align: left;
+}
