@@ -27,7 +27,7 @@ export const NuestrasPiscinas = () => {
                 data-aos="zoom-in "
                 data-aos-offset="200"
               >
-                <img src={logoPractipool}></img>
+                <img src={logoPractipool} Alt="Practipool"></img>
                 <p>
                   Ver modelos <i class="fas fa-chevron-right"></i>
                 </p>
@@ -38,11 +38,11 @@ export const NuestrasPiscinas = () => {
           <Col lg={4}>
             <Link to="/page2">
               <div
-                className="cardsIpc cardMedium"
+                className="cardsIpc"
                 data-aos="zoom-in"
                 data-aos-offset="300"
               >
-                <img src={logoStylePool}></img>
+                <img src={logoStylePool} Alt="StylePool"></img>
                 <p>
                   Ver modelos <i class="fas fa-chevron-right"></i>
                 </p>
@@ -57,7 +57,7 @@ export const NuestrasPiscinas = () => {
                 data-aos="zoom-in"
                 data-aos-offset="400"
               >
-                <img src={logoLuxury}></img>
+                <img src={logoLuxury} Alt="Logo"></img>
                 <p>
                   Ver modelos <i class="fas fa-chevron-right"></i>
                 </p>

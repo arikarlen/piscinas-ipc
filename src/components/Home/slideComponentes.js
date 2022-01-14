@@ -11,7 +11,7 @@ export const slideComponents = () => {
     <Container fluid className="backsHome" id="slideComponents">
       <Row>
         <Col lg={5} className="titleSlide">
-          <h2>Tu piscina completamente Instalada</h2>
+          <h2 data-aos="fade-left">Tu piscina completamente Instalada</h2>
         </Col>
         <Col lg={7}>
           <Carousel>

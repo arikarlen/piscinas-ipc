@@ -7,19 +7,19 @@ La variable de ambientes se setean en el archivo .env-cmdrc.json
 ### `npm run dev`
 
 Levanta el sitio en modo DEV.
-La url del Admin es http://localhost:1337/
-La url de la API es http://localhost:1337/api
+La url del Admin es **
+La url de la API es **
 
 ### `npm run staging`
 
 Levanta el sitio en STAGING.
-La url del Admin es ----------------
+La url del Admin es \*\*
 
 ### `npm run prod`
 
 Levanta el sitio en PROD.
-La url del Admin es https://admin.possumus.cloud/
-La url de la API es https://admin.possumus.cloud/api
+La url del Admin es **
+La url de la API es **
 
 ### `npm test`
 
