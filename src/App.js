@@ -5,12 +5,16 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import "./css/layout.css";
 import "./css/responsive.css";
 import Enviroment from "./components/Commons/enviroment";
+import Header from "./components/Commons/header";
+import Footer from "./components/Commons/footer";
 
 function App() {
   return (
     <Fragment>
       <Enviroment />
+      <Header />
       <AppRouter />
+      <Footer />
     </Fragment>
   );
 }

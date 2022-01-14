@@ -31,6 +31,7 @@
     --color-brown: #746050;
     --color-grey:#777;
     --color-dark-grey:#262626;
+    --color-hover-main:#0099e6;
     /*Transitions*/
     --standar-transition: 0.3s ease-in all;
     --fast-transition: 0.1s ease-in all;
@@ -68,6 +69,7 @@ p {
     font-size: 15px;
     color: var(--color-grey);
     font-family: 'Open Sans', sans-serif;
+    margin-top: 20px;
 }
 
 h1, h2, h3, h4 {
@@ -121,6 +123,44 @@ h5 {
 ul {
     padding: 0;
 }
+
+
+/**********Buttons*/
+.btn-primary {
+    border: none;
+    color: var(--color-white-full)!important;
+    background-color: var(--color-secondary) !important;
+    border-color: var(--color-secondary) !important;
+    margin-top: 25px;
+    font-size: 13px;
+    padding: 15px 30px;
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-hover-main)!important;
+}
+
+button.btn.btn-secondary {
+    border: transparent;
+    background-color: transparent;
+    
+    color: var(--color-secondary);
+    font-weight: 700;
+    text-decoration: none !important;
+    cursor: pointer;
+   
+}
+
+
+
+
+
+i.fas.fa-chevron-right {
+    margin-left: 5px;
+}
+
+/****Componentes*/
 
 .backsHome {
     position: relative;
@@ -286,10 +326,19 @@ i {
     transition: var(--standar-transition);
 }
 
+.changeColor .btn-presupuestar .nav-link {
+    color: #fff!important;
+}
+
 .changeColor .navbar-brand img {
     width: 40%;
     filter: none;
     transition: var(--fast-transition);
+}
+/*Esta clase es para agregar a un div dentro de todas las columnas que no son fullwidth*/
+.columnInner {
+    padding-left:15px ;
+    padding-right: 15px;
 }
 
 /*************Slider*/
@@ -404,4 +453,176 @@ img.iconCinta {
     left: 20%;
     top: 10%;
     text-align: left;
+}
+
+
+/*****Planta e Produccion*/
+
+#plantaProduccion {
+    padding-top: 120px;
+}
+
+/**************Momentos*/
+div#catalogoMomentos {
+    padding-top: 4em;
+}
+
+div#catalogoMomentos .cardsIpc {
+    padding: 0!important;
+    min-height: 290px!important;
+}
+
+.catalogoMomentosTexts.col-lg-6 {
+    padding: 20px 0 20px 40px;
+}
+
+.imgCatalogo {
+    min-height: 290px;
+}
+
+.imgCatalogo, .imgMomentos {
+    background-image: url(../assets/img-catalogo.png);
+    height: auto;
+    border-radius: 0 10px 10px 0;
+    background-size: cover;
+}
+
+.imgMomentos {
+    background-image: url(../assets/momentosipc.png);
+    height: auto;
+    border-radius: 0 10px 10px 0;
+    background-size: cover;
+}
+
+
+/*************Footer*/
+
+#footer {
+    padding-top: 80px;
+    padding: 80px 0 0 0;
+}
+
+#btnsFotoer img {
+    width: 20%;
+    margin-bottom: 2em;
+    transition: 0.4s all;
+}
+
+div#btnsFotoer {
+    background: linear-gradient( 
+0deg
+ , var(--color-main) 50%, var(--color-white) 50%);
+    padding: 0 0 10px 0;
+    margin: 0;
+}
+
+#btnsFotoer a {
+    position: relative;
+    top:0px;
+    transition: 0.4s all;
+}
+
+#btnsFotoer a:hover {
+    position: relative;
+    top:-20px;
+    transition: 0.4s all;
+}
+
+#btnsFotoer a:hover .cardsipc {
+    background-color: var(--color-secondary)!important;
+}
+
+#btnsFotoer a:hover .cardsipc h3 {
+    color: var(--color-white-full)!important;
+}
+
+#subFooter {
+    background-color: var(--color-main) ;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+#subFooter h1 {
+    font-size: 31px;
+    color: var(--color-white-full);
+    line-height: 30px;
+}
+img.logoFooter {
+    width: 20%;
+    float: left;
+    margin-right: 15%;
+}
+
+.textLogoFooter {
+    width: 50%;
+    float: left;
+    border-left: 1px solid var(--color-white-full);
+    padding-left: 15%;
+}
+
+.list-footer li a {
+    font-size: 18px;
+    color:var(--color-white-full)
+}
+
+.list-footer {
+    width: 20%;
+    margin: 0 auto;
+}
+
+.icono-prefooter {
+    border: none;
+    margin: 0 !important;
+    float: inherit;
+    filter: brightness(5);
+    width: 13%;
+    padding: 0 12px 0 0;
+}
+
+ul.list-data {
+    list-style: none;
+    align-items: center;
+    display: flex;
+    text-align: left !important;
+    margin-bottom: 2em !important;
+}
+
+.list-data li {
+    width: fit-content;
+    display: contents;
+    color: var(--color-white-full);
+    font-size: .9em;
+}
+
+
+.list-data li a {
+    color:var(--color-white-full)
+}
+
+#subFooter   i.fab {
+    color: white;
+    font-size: 3em;
+}
+
+ul.list-redes {
+    list-style: none;
+    display: flex;
+    margin-left: 3em !important;
+}
+
+.list-redes li {
+    padding: 1em !important;
+}
+
+div#footerBottom {
+    background-color: #324D77;
+    
+}
+
+#footerBottom p {
+    font-size: 13px;
+    color: #fff;
+}
+
+img.potenciado {
+    width: 150px;
 }
