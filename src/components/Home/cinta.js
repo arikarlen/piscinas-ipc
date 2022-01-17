@@ -17,7 +17,7 @@ export const Cinta = () => {
               ></img>
 
               <h4>Concesionario más cercano</h4>
-              <p>Localizá nuestros puntos de venta</p>
+              <p>Localizá nuestros puntos de VENTA</p>
             </a>
           </Col>
           <Col lg={4}>
