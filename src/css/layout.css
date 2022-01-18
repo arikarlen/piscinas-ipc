@@ -43,7 +43,9 @@
 }
 
 
-
+html {
+    overflow-x: hidden;
+}
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -625,4 +627,18 @@ div#footerBottom {
 
 img.potenciado {
     width: 150px;
+}
+
+/*Pagina Empresa*/
+#imageLayer {
+    background-image: url(../assets/banner-empresa_01-min.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.text-white {
+    color: var(--color-white-full);
 }
