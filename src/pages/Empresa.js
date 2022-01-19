@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 
 import BackImage from "../components/Empresa/backImage";
+import Expansion from "../components/Empresa/expansion";
 import Pilares from "../components/Empresa/pilares";
 
 export const Empresa = () => {
@@ -8,6 +9,7 @@ export const Empresa = () => {
    <Fragment>
      <BackImage />
      <Pilares />
+     <Expansion />
    </Fragment>
  );
 };
