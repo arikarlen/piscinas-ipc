@@ -642,3 +642,33 @@ img.potenciado {
 .text-white {
     color: var(--color-white-full);
 }
+.backpilares, .backpilares .col-lg-12 {
+    padding: 0;
+}
+.color-lightblue {
+    color: var(--color-secondary);
+}
+.col-titlepilares {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.padd-section {
+    padding: 100px 0px;
+}
+.text-pilares {
+    margin-top: 0;
+    color: var(--color-main);
+}
+#section-pilares {
+    background-color: #fff !important;
+}
+.hover-section:hover {
+    background-color: #fafbff;
+    border-radius: 15px;
+}
+.hover-section {
+    padding: 15px;
+    margin-bottom: 20px;
+}
+img {width: 100%;}
