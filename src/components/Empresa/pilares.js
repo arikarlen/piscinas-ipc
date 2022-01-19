@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import PeoplePool from "../../assets/banner-gente_01-min.jpg";
+import PeoplePoolMobile from "../../assets/banner-gente_02-min.jpg";
 
 export const Pilares = () => {
   return (
@@ -48,9 +49,16 @@ export const Pilares = () => {
       </Container>
        <Container fluid className="backpilares">
           <Row>
-            <Col lg={12}>
+            <Col lg={12} className="d-none d-lg-block">
               <img
                 src={PeoplePool}
+                data-aos="zoom-in"
+                data-aos-offset="210"
+              ></img>
+            </Col>
+            <Col sm={12} className="d-block d-md-none d-lg-none">
+              <img
+                src={PeoplePoolMobile}
                 data-aos="zoom-in"
                 data-aos-offset="210"
               ></img>
