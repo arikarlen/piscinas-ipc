@@ -54,6 +54,7 @@ export const Pilares = () => {
                 src={PeoplePool}
                 data-aos="zoom-in"
                 data-aos-offset="210"
+                alt="people pool"
               ></img>
             </Col>
             <Col sm={12} className="d-block d-md-none d-lg-none">
@@ -61,6 +62,7 @@ export const Pilares = () => {
                 src={PeoplePoolMobile}
                 data-aos="zoom-in"
                 data-aos-offset="210"
+                alt="people pool"
               ></img>
             </Col>
           </Row>
