@@ -707,3 +707,66 @@ img {
     font-weight: 700;
     line-height: 1.8;
 }
+.contenido-slider.carousel-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.ipc-numeros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 0px;
+}
+.borde-rght {
+    border-right: 1px solid var(--color-main);
+    height: 20vh;
+}
+.ipc-numeros h2 {
+    margin: 0px;
+    color: var(--color-black);
+}
+.ipc-numeros h2 {
+    margin: 0px;
+    color: var(--color-black);
+}
+.number-big {
+    font-size: 86px;
+    font-weight: 600;
+    color: var(--color-secondary);
+    font-family: 'Prompt';
+    line-height: 0.6;
+    padding-top: 32px;
+}
+.ipc-numeros p {
+    color: var(--color-main);
+    font-weight: 700;
+    font-size: 23px;
+    font-family: 'Lato';
+}
+.carousel-control-prev-icon {
+    background-image: url(../assets/left-arrow-04.svg);
+}
+.carousel-control-next-icon {
+    background-image: url(../assets/right-arrow-04.svg);
+}
+.carousel-control-prev{
+    margin-left: 27px;
+    justify-content: inherit;
+}
+.carousel-control-next {
+    margin-right: 27px;
+    justify-content: right;
+}
+.carousel-control-next, .carousel-control-prev {
+    opacity: 1;
+}
+.carousel-indicators {
+    display: none;
+}
+@media (min-width: 1024px) and (max-width:1200px) {
+    .section-numbers .carousel-caption {
+        right: 10%;
+        left: 13%;
+    }
+}

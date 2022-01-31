@@ -1,0 +1,52 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.82465" height="23.52644" viewBox="0 0 32.82465 23.52644">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-rule: evenodd;
+      }
+
+      .cls-3 {
+        opacity: 0.495;
+        isolation: isolate;
+      }
+
+      .cls-4 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-5 {
+        clip-path: url(#clip-path-2);
+      }
+
+      .cls-6 {
+        clip-path: url(#clip-path-3);
+      }
+
+      .cls-7 {
+        fill: #054172;
+      }
+    </style>
+    <clipPath id="clip-path" transform="translate(0.83221 0.66576)">
+      <rect id="SVGID" class="cls-1" x="0.0625" y="0.0625" width="31.315" height="22.36786"/>
+    </clipPath>
+    <clipPath id="clip-path-2" transform="translate(0.83221 0.66576)">
+      <path id="SVGID-2" data-name="SVGID" class="cls-2" d="M30.688,10.07343A1.31774,1.31774,0,0,1,31.077,11.097a1.31544,1.31544,0,0,1-.38906,1.02359l-9.51809,9.31761a1.40146,1.40146,0,0,1-1.95219,0,1.33336,1.33336,0,0,1,0-1.91131l7.23343-7.07908H1.44213a1.35068,1.35068,0,1,1,0-2.70074h25.009L19.21769,2.66626a1.3313,1.3313,0,0,1,0-1.90957,1.40148,1.40148,0,0,1,1.95219,0Z"/>
+    </clipPath>
+    <clipPath id="clip-path-3" transform="translate(0.83221 0.66576)">
+      <rect id="SVGID-3" data-name="SVGID" class="cls-1" x="-14.25293" y="-18.7265" width="57.26172" height="57.26172"/>
+    </clipPath>
+  </defs>
+  <g class="cls-3">
+    <g class="cls-4">
+      <g class="cls-5">
+        <g class="cls-6">
+          <rect class="cls-7" width="32.82465" height="23.52644"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
