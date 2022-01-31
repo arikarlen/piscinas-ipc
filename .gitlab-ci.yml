@@ -20,4 +20,4 @@ deploy:
    - bash deploy.sh
   
   only:
-   - develop 
+   - staging 
