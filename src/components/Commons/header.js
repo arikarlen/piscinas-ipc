@@ -11,7 +11,7 @@ export const Header = () => {
       id="headerFixed"
     >
       <Container>
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           <img src={LogoHeaderBlue} />
         </a>
         <button
