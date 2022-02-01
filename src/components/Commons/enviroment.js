@@ -6,12 +6,12 @@ export const Enviroment = () => {
       {(() => {
         if (
           process.env.REACT_APP_URL_API ===
-          "https://admin-develop.piscinasipc.com/"
+          "https://admin-develop.piscinasipc.com"
         ) {
           return <div className="warning dev">Dev</div>;
         } else if (
           process.env.REACT_APP_URL_API ===
-          "https://admin-staging.piscinasipc.com/"
+          "https://admin-staging.piscinasipc.com"
         ) {
           return <div className="warning staging">Staging</div>;
         }
