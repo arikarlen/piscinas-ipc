@@ -63,11 +63,16 @@ export const SlideComponents = () => {
               {loadedData ? (
                 slides.map((slide, i) => (
                   <div className={slide.Clase} key={slide.id}>
-                    <img
-                      className="d-block w-100"
-                      src={process.env.REACT_APP_URL_API + slide.Imagen.url}
-                      alt="First slide"
-                    />
+                    {slide.Imagen.url ? (
+                      <img
+                        className="d-block w-100"
+                        src={process.env.REACT_APP_URL_API + slide.Imagen.url}
+                        alt="First slide"
+                      />
+                    ) : (
+                      <p>Cargando imagen</p>
+                    )}
+
                     <div className="carousel-caption d-none d-md-block">
                       <h5>{slide.Titulo}</h5>
                       <p>{slide.Descripcion}</p>
