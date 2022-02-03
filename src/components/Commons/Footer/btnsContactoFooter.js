@@ -13,12 +13,12 @@ export const BtnsContactoFooter = () => {
           <Col lg={3} data-aos="zoom-in">
             <a href="/trabaja-con-nosotros">
               <div className=" cardsIpc ">
-                <img src={imgTrabaja}></img>
+                <img src={imgTrabaja} alt="Trabaja con nosotros"></img>
                 <h3>
                   Trabajá con <br></br>nosotros
                 </h3>
                 <Button variant="secondary">
-                  Más info<i class="fas fa-chevron-right"></i>
+                  Más info<i className="fas fa-chevron-right"></i>
                 </Button>
               </div>
             </a>
@@ -26,11 +26,11 @@ export const BtnsContactoFooter = () => {
           <Col lg={3} data-aos="zoom-in" data-aos-offset="200">
             <a href="/parte-de-nuestra-red">
               <div className=" cardsIpc ">
-                <img src={imgRed}></img>
+                <img src={imgRed} alt="Forma parte de nuestra red"></img>
 
                 <h3>Formá parte de nuestra red</h3>
                 <Button variant="secondary">
-                  Más info<i class="fas fa-chevron-right"></i>
+                  Más info<i className="fas fa-chevron-right"></i>
                 </Button>
               </div>
             </a>
@@ -38,11 +38,11 @@ export const BtnsContactoFooter = () => {
           <Col lg={3} data-aos="zoom-in" data-aos-offset="400">
             <a href="/queres-ser-proveedor/">
               <div className=" cardsIpc ">
-                <img src={imgProveedor}></img>
+                <img src={imgProveedor} alt="¿Queres ser proveedor?"></img>
 
                 <h3>¿Querés ser proveedor?</h3>
                 <Button variant="secondary">
-                  Más info<i class="fas fa-chevron-right"></i>
+                  Más info<i className="fas fa-chevron-right"></i>
                 </Button>
               </div>
             </a>
@@ -50,10 +50,10 @@ export const BtnsContactoFooter = () => {
           <Col lg={3} data-aos="zoom-in" data-aos-offset="600">
             <a href="/contactanos">
               <div className=" cardsIpc ">
-                <img src={imgContacto}></img>
+                <img src={imgContacto} alt="Contactanos"></img>
                 <h3>Contactanos</h3>
                 <Button variant="secondary">
-                  Más info<i class="fas fa-chevron-right"></i>
+                  Más info<i className="fas fa-chevron-right"></i>
                 </Button>
               </div>
             </a>

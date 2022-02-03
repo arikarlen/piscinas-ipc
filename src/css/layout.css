@@ -55,6 +55,10 @@ body {
     color:var(--color-grey)
 }
 
+.container-fluid {
+    width: 101%;
+}
+
 a {
     text-decoration: none;
     transition: var(--standar-transition);

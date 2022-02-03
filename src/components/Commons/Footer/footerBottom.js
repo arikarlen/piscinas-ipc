@@ -18,7 +18,7 @@ export const FooterBottom = () => {
               Potenciado por{" "}
               <img
                 src={potenciado}
-                Alt="Possumus"
+                alt="Possumus"
                 className="potenciado "
               ></img>
             </p>

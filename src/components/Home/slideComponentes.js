@@ -1,12 +1,18 @@
-import React from "react";
-import { Container, Row, Col, Carousel } from "react-bootstrap";
-import SlideCasco from "../../assets/SliderHome/slideCasco.jpg";
-import SlideConecciones from "../../assets/SliderHome/conecciones.png";
-import SlideFiltrado from "../../assets/SliderHome/equipo-filtrado.jpg";
-import SlideVeredas from "../../assets/SliderHome/veredas-atermicas.jpg";
-import SlideSoma from "../../assets/SliderHome/filtradoSOMA.jpg";
+import React, { useState, useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import axios from "axios";
 
-export const slideComponents = () => {
+export const SlideComponents = () => {
+  const [slides, setslides] = useState([]);
+  const [loadedData, setLoadedData] = useState(false);
+
+  useEffect(() => {
+    axios.get(`${process.env.REACT_APP_URL_API}/pages-home`).then((res) => {
+      setslides(res.data.Componentes);
+      setLoadedData(true);
+    });
+  }, []);
+
   return (
     <Container fluid className="backsHome" id="slideComponents">
       <Row>
@@ -14,89 +20,93 @@ export const slideComponents = () => {
           <h2 data-aos="fade-left">Tu piscina completamente Instalada</h2>
         </Col>
         <Col lg={7}>
-          <Carousel>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src={SlideCasco}
-                alt="First slide"
-              />
-              <Carousel.Caption>
-                <h2>Casco</h2>
-                <p class="text-white">
-                  Monocasco de plástico reforzado con fibra de vidrio. Posee
-                  mayor estética, durabilidad y funcionalidad. Producido bajo un
-                  sistema de gestión de calidad ISO 9001.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src={SlideConecciones}
-                alt="First slide"
-              />
-              <Carousel.Caption>
-                <h2>Conexiones</h2>
-                <p class="text-white">
-                  Sistema de hidrojets que incorpora al agua un porcentaje de
-                  oxígeno que brinda un masaje más suave y burbujeante. Además,
-                  mejora considerablemente el mantenimiento del agua.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src={SlideFiltrado}
-                alt="First slide"
-              />
-              <Carousel.Caption>
-                <h2>Equipo de filtrado</h2>
-                <p class="text-white">
-                  Silencioso, veloz y de bajo consumo. Es capaz de filtrar
-                  15.000 litros por hora para piscinas de hasta 64 m3. Cuenta
-                  con gabinete amigable con el entorno y tablero eléctrico con
-                  todas las normas de seguridad.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src={SlideVeredas}
-                alt="First slide"
-              />
-              <Carousel.Caption>
-                <h2>Placas atérmicas</h2>
-                <p class="text-white">
-                  Antideslizantes y atérmicas, para cubrir su perímetro.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src={SlideSoma}
-                alt="First slide"
-              />
-              <Carousel.Caption>
-                <h2>Accesorios de limpieza SOMMA</h2>
-                <p class="text-white">
-                  Conjunto de elementos pensados para un óptimo mantenimiento y
-                  cuidado del agua.
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel>
+          <div
+            id="carouselExampleCaptions"
+            className="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div className="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="0"
+                className="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="3"
+                aria-label="Slide 4"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="4"
+                aria-label="Slide 5"
+              ></button>
+            </div>
+            <div className="carousel-inner">
+              {loadedData ? (
+                slides.map((slide, i) => (
+                  <div className={slide.Clase} key={slide.id}>
+                    <img
+                      className="d-block w-100"
+                      src={process.env.REACT_APP_URL_API + slide.Imagen.url}
+                      alt="First slide"
+                    />
+                    <div className="carousel-caption d-none d-md-block">
+                      <h5>{slide.Titulo}</h5>
+                      <p>{slide.Descripcion}</p>
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <p>Cargando...</p>
+              )}
+            </div>
+            <button
+              className="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev"
+            >
+              <span
+                className="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Previous</span>
+            </button>
+            <button
+              className="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next"
+            >
+              <span
+                className="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Next</span>
+            </button>
+          </div>
         </Col>
       </Row>
     </Container>
   );
 };
 
-export default slideComponents;
+export default SlideComponents;
