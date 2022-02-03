@@ -1,10 +1,21 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import LogoHeaderBlue from "../../assets/LogoIPCBlue.svg";
+import React, { useState, useEffect } from "react";
+import { Container } from "react-bootstrap";
+import axios from "axios";
+
 import Accesorios from "./Header/accesorios";
 import Piscinas from "./Header/piscinas";
 
 export const Header = () => {
+  const [logo, setLogo] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`${process.env.REACT_APP_URL_API}/info-institucional`)
+      .then((res) => {
+        setLogo(res.data.Logo);
+      });
+  }, []);
+
   return (
     <nav
       className="navbar navbar-expand-lg navbar-dark  fixed-top"
@@ -12,7 +23,10 @@ export const Header = () => {
     >
       <Container>
         <a className="navbar-brand" href="/">
-          <img src={LogoHeaderBlue} />
+          <img
+            src={process.env.REACT_APP_URL_API + logo.url}
+            alt={logo.alternativeText}
+          />
         </a>
         <button
           className="navbar-toggler"
@@ -25,28 +39,28 @@ export const Header = () => {
         <div className="collapse navbar-collapse" id="main_nav">
           <ul className="navbar-nav">
             <li className="nav-item dropdown has-megamenu">
-              <a className="nav-link dropdown-toggle" href="#">
-                Piscinas <i class="fas fa-arrow-down"></i>
+              <a className="nav-link dropdown-toggle" href="/">
+                Piscinas <i className="fas fa-arrow-down"></i>
               </a>
               <div className="dropdown-menu megamenu" role="menu">
                 <Piscinas />
               </div>
             </li>
             <li className="nav-item dropdown has-megamenu">
-              <a className="nav-link dropdown-toggle" href="#">
-                Accesorios <i class="fas fa-arrow-down"></i>
+              <a className="nav-link dropdown-toggle" href="/">
+                Accesorios <i className="fas fa-arrow-down"></i>
               </a>
               <div className="dropdown-menu megamenu" role="menu">
                 <Accesorios />
               </div>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/">
                 Catálogo
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/">
                 Razones
               </a>
             </li>
@@ -56,12 +70,12 @@ export const Header = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/">
                 Contacto
               </a>
             </li>
             <li className="nav-item btn-presupuestar ">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/">
                 Presupuestar
               </a>
             </li>

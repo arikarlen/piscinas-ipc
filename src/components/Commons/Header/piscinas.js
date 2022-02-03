@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 export const Piscinas = () => {
   return (
@@ -12,7 +12,7 @@ export const Piscinas = () => {
         </p>
       </Col>
       <Col lg={3}>
-        <div class="opcionesMenu">
+        <div className="opcionesMenu">
           <h3>
             <a href="/practipool/">PractiPool</a>
           </h3>
@@ -33,13 +33,13 @@ export const Piscinas = () => {
               <a href="/spa/"> Spa</a>
             </li>
             <li>
-              <a href="relax"> Relax</a>
+              <a href="/relax/"> Relax</a>
             </li>
           </ul>
         </div>
       </Col>
       <Col lg={3}>
-        <div class="opcionesMenu">
+        <div className="opcionesMenu">
           <h3>
             <a href="/style-pool/">Style Pool</a>
           </h3>
@@ -58,7 +58,7 @@ export const Piscinas = () => {
         </div>
       </Col>
       <Col lg={3}>
-        <div class="opcionesMenu">
+        <div className="opcionesMenu">
           <h3>
             <a href="/luxury/">Luxury</a>
           </h3>

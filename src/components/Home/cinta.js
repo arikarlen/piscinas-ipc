@@ -12,8 +12,8 @@ export const Cinta = () => {
             <a href="/contacto/">
               <img
                 src={ImgConcesionario}
-                class="iconCinta"
-                Alt="Concesionario más cercano"
+                className="iconCinta"
+                alt="Concesionario más cercano"
               ></img>
 
               <h4>Concesionario más cercano</h4>
@@ -24,8 +24,8 @@ export const Cinta = () => {
             <a href="/contacto/">
               <img
                 src={ImgAsesoramiento}
-                class="iconCinta"
-                Alt="Concesionario más cercano"
+                className="iconCinta"
+                alt="Concesionario más cercano"
               ></img>
               <h4>Asesoramiento técnico</h4>
               <p>Te orientamos en tu compra</p>
@@ -35,8 +35,8 @@ export const Cinta = () => {
             <a href="/contacto/">
               <img
                 src={ImgConcesionario}
-                class="iconCinta"
-                Alt="Concesionario más cercano"
+                className="iconCinta"
+                alt="Concesionario más cercano"
               ></img>
 
               <h4>Cotizador online</h4>
