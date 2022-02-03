@@ -37,12 +37,16 @@ export const PlantaProduccion = () => {
           </Col>
           <Col lg={6}>
             <div className="columnInner">
-              <img
-                src={process.env.REACT_APP_URL_API + imagenProd.url}
-                data-aos="zoom-in"
-                data-aos-offset="100"
-                alt={imagenProd.alternativeText}
-              ></img>
+              {imagenProd.url ? (
+                <img
+                  src={process.env.REACT_APP_URL_API + imagenProd.url}
+                  data-aos="zoom-in"
+                  data-aos-offset="100"
+                  alt={imagenProd.alternativeText}
+                ></img>
+              ) : (
+                <p>Cargando imagen</p>
+              )}
             </div>
           </Col>
         </Row>

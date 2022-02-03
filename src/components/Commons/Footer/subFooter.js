@@ -17,16 +17,23 @@ export const SubFooter = () => {
       });
   }, []);
 
+  const imagen = process.env.REACT_APP_URL_API + logoFooter.url;
+
   return (
     <Container fluid id="subFooter">
       <Container>
         <Row>
           <Col lg={4}>
-            <img
-              src={process.env.REACT_APP_URL_API + logoFooter.url}
-              alt={logoFooter.alternativeText}
-              className="logoFooter"
-            ></img>
+            {logoFooter?.url ? (
+              <img
+                src={process.env.REACT_APP_URL_API + logoFooter.url}
+                alt={logoFooter.alternativeText}
+                className="logoFooter"
+              ></img>
+            ) : (
+              <p>Cargando imagen</p>
+            )}
+
             <div className="textLogoFooter">
               <h1>Innovación</h1>
               <h1>Pasión</h1>

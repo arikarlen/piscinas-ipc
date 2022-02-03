@@ -20,11 +20,16 @@ export const SliderNumerosNew = () => {
         {loadedData ? (
           slidesNumeros.map((slideNumero, i) => (
             <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src={BackNumberSlide}
-                alt="First slide"
-              />
+              {BackNumberSlide ? (
+                <img
+                  className="d-block w-100"
+                  src={BackNumberSlide}
+                  alt="First slide"
+                />
+              ) : (
+                <p>Cargando imagen</p>
+              )}
+
               <Carousel.Caption className="contenido-slider">
                 <Container className="section-textonumbers">
                   <Row>

@@ -23,10 +23,14 @@ export const Header = () => {
     >
       <Container>
         <a className="navbar-brand" href="/">
-          <img
-            src={process.env.REACT_APP_URL_API + logo.url}
-            alt={logo.alternativeText}
-          />
+          {logo?.url ? (
+            <img
+              src={process.env.REACT_APP_URL_API + logo.url}
+              alt={logo.alternativeText}
+            />
+          ) : (
+            <p>Cargando imagen</p>
+          )}
         </a>
         <button
           className="navbar-toggler"

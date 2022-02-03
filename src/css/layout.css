@@ -33,6 +33,7 @@
     --color-dark-grey:#262626;
     --color-hover-main:#0099e6;
     --color-text-black:#1d1d1f;
+    --color-practipool-main:#1385A7;
     /*Transitions*/
     --standar-transition: 0.3s ease-in all;
     --fast-transition: 0.1s ease-in all;
@@ -767,6 +768,18 @@ img {
 }
 .carousel-indicators {
     display: none;
+}
+
+/*****************Practipool*/
+
+#bannerPractipool {
+    background-color: var(--color-practipool-main);
+    padding-top: 250px!important;
+    padding-bottom: 150px;
+}
+
+#bannerPractipool p {
+    color:var(--color-white-full)
 }
 @media (min-width: 1024px) and (max-width:1200px) {
     .section-numbers .carousel-caption {

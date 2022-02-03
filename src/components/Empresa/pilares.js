@@ -65,20 +65,28 @@ export const Pilares = () => {
       <Container fluid className="backpilares">
         <Row>
           <Col lg={12} className="d-none d-lg-block">
-            <img
-              src={bannerDesktop}
-              data-aos="zoom-in"
-              data-aos-offset="210"
-              alt={bannerMedioDesktop.alternativeText}
-            ></img>
+            {bannerDesktop ? (
+              <img
+                src={bannerDesktop}
+                data-aos="zoom-in"
+                data-aos-offset="210"
+                alt={bannerMedioDesktop.alternativeText}
+              ></img>
+            ) : (
+              <p>Cargando imagen</p>
+            )}
           </Col>
           <Col sm={12} className="d-block d-md-none d-lg-none">
-            <img
-              src={bannerMobile}
-              data-aos="zoom-in"
-              data-aos-offset="210"
-              alt={bannerMedioMobile.alternativeText}
-            ></img>
+            {bannerMobile ? (
+              <img
+                src={bannerMobile}
+                data-aos="zoom-in"
+                data-aos-offset="210"
+                alt={bannerMedioMobile.alternativeText}
+              ></img>
+            ) : (
+              <p>Cargando imagen</p>
+            )}
           </Col>
         </Row>
       </Container>
