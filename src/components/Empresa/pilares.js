@@ -1,74 +1,88 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import PeoplePool from "../../assets/banner-gente_01-min.jpg";
-import PeoplePoolMobile from "../../assets/banner-gente_02-min.jpg";
+import axios from "axios";
 
 export const Pilares = () => {
+  const [pilares, setpilares] = useState([]);
+  const [bannerMedioDesktop, setbannerMedioDesktop] = useState([]);
+  const [bannerMedioMobile, setbannerMedioMobile] = useState([]);
+  const [loadedData, setLoadedData] = useState(false);
+
+  useEffect(() => {
+    axios.get(`${process.env.REACT_APP_URL_API}/pages-empresa`).then((res) => {
+      setpilares(res.data.Pilares);
+      setbannerMedioDesktop(res.data.BannerMedio);
+      setbannerMedioMobile(res.data.BannerMedioMobile);
+      setLoadedData(true);
+    });
+  }, []);
+
+  const bannerDesktop = process.env.REACT_APP_URL_API + bannerMedioDesktop.url;
+  const bannerMobile = process.env.REACT_APP_URL_API + bannerMedioMobile.url;
   return (
     <Container fluid id="section-pilares">
       <Container className="padd-section">
         <Row>
           <Col lg={6} className="col-titlepilares">
-          <div className="columnInner">
-              <h1 className="title-left color-lightblue" data-aos="zoom-in" data-aos-offset="100">
+            <div className="columnInner">
+              <h1
+                className="title-left color-lightblue"
+                data-aos="zoom-in"
+                data-aos-offset="100"
+              >
                 Tres pilares
-                <h1 className="title-pilares color-blue" data-aos="zoom-in" data-aos-offset="110">que nos definen</h1>
+                <h1
+                  className="title-pilares color-blue"
+                  data-aos="zoom-in"
+                  data-aos-offset="110"
+                >
+                  que nos definen
+                </h1>
               </h1>
             </div>
           </Col>
 
           <Col lg={6}>
-          <div className="columnInner">
-            <div className="hover-section">
-              <h3 className="title-pilares" data-aos="zoom-in" data-aos-offset="200">
-                Innovación
-              </h3>
-              <p className="text-pilares" data-aos="zoom-in" data-aos-offset="200">
-                Idear soluciones novedosas y originales ante necesidades del cliente, la organización y la sociedad.
-              </p>
+            <div
+              className="columnInner"
+              data-aos="zoom-in"
+              data-aos-offset="120"
+            >
+              {loadedData ? (
+                pilares.map((pilar, i) => (
+                  <div className="hover-section" key={pilar.id}>
+                    <h3 className="title-pilares">{pilar.Titulo}</h3>
+                    <p className="text-pilares">{pilar.Descripcion}</p>
+                  </div>
+                ))
+              ) : (
+                <p>Cargando...</p>
+              )}
             </div>
-            <div className="hover-section">
-              <h3 className="title-pilares" data-aos="zoom-in" data-aos-offset="200">
-                Pasión
-              </h3>
-              <p className="text-pilares" data-aos="zoom-in" data-aos-offset="200">
-                Sentir entusiasmo y deseo por la excelencia.
-              </p>
-            </div>
-            <div className="hover-section">
-              <h3 className="title-pilares" data-aos="zoom-in" data-aos-offset="200">
-                Confianza
-              </h3>
-              <p className="text-pilares" data-aos="zoom-in" data-aos-offset="200">
-                Ser líderes en el rubro por el compromiso con nuestros clientes.
-              </p>
-            </div>
-          </div>
           </Col>
         </Row>
       </Container>
-       <Container fluid className="backpilares">
-          <Row>
-            <Col lg={12} className="d-none d-lg-block">
-              <img
-                src={PeoplePool}
-                data-aos="zoom-in"
-                data-aos-offset="210"
-                alt="people pool"
-              ></img>
-            </Col>
-            <Col sm={12} className="d-block d-md-none d-lg-none">
-              <img
-                src={PeoplePoolMobile}
-                data-aos="zoom-in"
-                data-aos-offset="210"
-                alt="people pool"
-              ></img>
-            </Col>
-          </Row>
-        </Container>
+      <Container fluid className="backpilares">
+        <Row>
+          <Col lg={12} className="d-none d-lg-block">
+            <img
+              src={bannerDesktop}
+              data-aos="zoom-in"
+              data-aos-offset="210"
+              alt={bannerMedioDesktop.alternativeText}
+            ></img>
+          </Col>
+          <Col sm={12} className="d-block d-md-none d-lg-none">
+            <img
+              src={bannerMobile}
+              data-aos="zoom-in"
+              data-aos-offset="210"
+              alt={bannerMedioMobile.alternativeText}
+            ></img>
+          </Col>
+        </Row>
+      </Container>
     </Container>
-    
   );
 };
 

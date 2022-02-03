@@ -27,9 +27,9 @@ export const NuestrasPiscinas = () => {
                 data-aos="zoom-in "
                 data-aos-offset="200"
               >
-                <img src={logoPractipool} Alt="Practipool"></img>
+                <img src={logoPractipool} alt="Practipool"></img>
                 <p>
-                  Ver modelos <i class="fas fa-chevron-right"></i>
+                  Ver modelos <i className="fas fa-chevron-right"></i>
                 </p>
               </div>
             </Link>
@@ -42,9 +42,9 @@ export const NuestrasPiscinas = () => {
                 data-aos="zoom-in"
                 data-aos-offset="300"
               >
-                <img src={logoStylePool} Alt="StylePool"></img>
+                <img src={logoStylePool} alt="StylePool"></img>
                 <p>
-                  Ver modelos <i class="fas fa-chevron-right"></i>
+                  Ver modelos <i className="fas fa-chevron-right"></i>
                 </p>
               </div>
             </Link>
@@ -57,9 +57,9 @@ export const NuestrasPiscinas = () => {
                 data-aos="zoom-in"
                 data-aos-offset="400"
               >
-                <img src={logoLuxury} Alt="Logo"></img>
+                <img src={logoLuxury} alt="Logo"></img>
                 <p>
-                  Ver modelos <i class="fas fa-chevron-right"></i>
+                  Ver modelos <i className="fas fa-chevron-right"></i>
                 </p>
               </div>
             </Link>

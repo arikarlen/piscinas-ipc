@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 export const Accesorios = () => {
   return (
@@ -12,7 +12,7 @@ export const Accesorios = () => {
         </p>
       </Col>
       <Col lg={3}>
-        <div class="opcionesMenu">
+        <div className="opcionesMenu">
           <h3>
             <a href="attenuar">Attenuar</a>
           </h3>
@@ -21,7 +21,7 @@ export const Accesorios = () => {
         </div>
       </Col>
       <Col lg={3}>
-        <div class="opcionesMenu">
+        <div className="opcionesMenu">
           <h3>
             <a href="somma">Somma</a>
           </h3>
@@ -30,7 +30,7 @@ export const Accesorios = () => {
         </div>
       </Col>
       <Col lg={3}>
-        <div class="opcionesMenu">
+        <div className="opcionesMenu">
           <h3>
             <a href="feel-design">Feel Design</a>
           </h3>

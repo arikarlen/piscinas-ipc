@@ -1,18 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import axios from "axios";
 
 export const BackImage = () => {
+  const [bannerEmpresa, setbannerEmpresa] = useState([]);
+
+  useEffect(() => {
+    axios.get(`${process.env.REACT_APP_URL_API}/pages-empresa`).then((res) => {
+      setbannerEmpresa(res.data.Banner);
+    });
+  }, []);
+
   return (
     <Container fluid id="imageLayer">
       <Container>
         <Row>
           <Col lg={6}>
-          <div className="columnInner">
-              <h2 className="text-white" data-aos="zoom-in" data-aos-offset="100">
-                ¡Hola! Somos IPC Pools
+            <div className="columnInner">
+              <h2
+                className="text-white"
+                data-aos="zoom-in"
+                data-aos-offset="100"
+              >
+                {bannerEmpresa.Titulo}
               </h2>
-              <p className="text-white" data-aos="zoom-in" data-aos-offset="200">
-              Nacimos en 1993 en Mendoza, Argentina. Somos líderes en la fabricación de piscinas de plástico reforzado con fibra de vidrio. A lo largo de casi tres décadas, nos convertimos en la empresa más grande de Argentina en su rubro.
+              <p
+                className="text-white"
+                data-aos="zoom-in"
+                data-aos-offset="200"
+              >
+                {bannerEmpresa.Descripcion}
               </p>
               <Button
                 href="#"
@@ -25,7 +42,7 @@ export const BackImage = () => {
             </div>
           </Col>
         </Row>
-       </Container>
+      </Container>
     </Container>
   );
 };

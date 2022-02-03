@@ -1,18 +1,30 @@
-import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
-import LogoHeaderBlue from "../../../assets/LogoIPCWhite.svg";
+import React, { useState, useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import axios from "axios";
 import phone from "../../../assets/phone.svg";
 import MapMaker from "../../../assets/map-marker.svg";
 
 export const SubFooter = () => {
+  const [datosEmpresa, setdatosEmpresa] = useState([]);
+  const [logoFooter, setlogoFooter] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`${process.env.REACT_APP_URL_API}/info-institucional`)
+      .then((res) => {
+        setdatosEmpresa(res.data.Datos_Empresa);
+        setlogoFooter(res.data.Logo_Alt);
+      });
+  }, []);
+
   return (
     <Container fluid id="subFooter">
       <Container>
         <Row>
           <Col lg={4}>
             <img
-              src={LogoHeaderBlue}
-              Alt="Ipc Pools"
+              src={process.env.REACT_APP_URL_API + logoFooter.url}
+              alt={logoFooter.alternativeText}
               className="logoFooter"
             ></img>
             <div className="textLogoFooter">
@@ -48,41 +60,49 @@ export const SubFooter = () => {
           <Col lg={4}>
             <ul className="list-data">
               <li>
-                <img src={phone} class="icono-prefooter"></img>
+                <img
+                  src={phone}
+                  className="icono-prefooter"
+                  alt="Telefono"
+                ></img>
               </li>
               <li>
-                <a href="tel:+542614637550">(+54) 261 463 7550</a>
+                <a href="tel:+542614637550">{datosEmpresa.Telefono}</a>
               </li>
             </ul>
 
             <ul className="list-data">
               <li>
-                <img src={MapMaker} class="icono-prefooter"></img>
+                <img
+                  src={MapMaker}
+                  className="icono-prefooter"
+                  alt="Direccion"
+                ></img>
               </li>
               <li>
-                Casa Central - Fábrica<br></br> Álvarez Condarco 2060 - Parque
-                Industrial<br></br>
-                Las Heras, Mendoza
+                Casa Central - Fábrica<br></br> {datosEmpresa.Direccion}
+                <br></br>
+                {datosEmpresa.Ciudad}, {datosEmpresa.Provincia}
               </li>
             </ul>
 
-            <ul class="list-redes">
+            <ul className="list-redes">
               <li>
                 <a
-                  href="https://www.facebook.com/IPCPools.CasaCentral"
+                  href={datosEmpresa.Facebook}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i class="fab fa-facebook"></i>
+                  <i className="fab fa-facebook"></i>
                 </a>
               </li>
               <li>
                 <a
-                  href="https://www.instagram.com/piscinasipc/?hl=es-la"
+                  href={datosEmpresa.Instagram}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i class="fab fa-instagram"></i>
+                  <i className="fab fa-instagram"></i>
                 </a>
               </li>
             </ul>
