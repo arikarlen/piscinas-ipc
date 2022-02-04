@@ -1,52 +1,10 @@
-<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.82465" height="23.52644" viewBox="0 0 32.82465 23.52644">
-  <defs>
-    <style>
-      .cls-1, .cls-2 {
-        fill: none;
-      }
-
-      .cls-2 {
-        clip-rule: evenodd;
-      }
-
-      .cls-3 {
-        opacity: 0.495;
-        isolation: isolate;
-      }
-
-      .cls-4 {
-        clip-path: url(#clip-path);
-      }
-
-      .cls-5 {
-        clip-path: url(#clip-path-2);
-      }
-
-      .cls-6 {
-        clip-path: url(#clip-path-3);
-      }
-
-      .cls-7 {
-        fill: #054172;
-      }
-    </style>
-    <clipPath id="clip-path" transform="translate(0.55244 0.36782)">
-      <rect id="SVGID" class="cls-1" x="0.0625" y="0.0625" width="31.315" height="22.36786"/>
-    </clipPath>
-    <clipPath id="clip-path-2" transform="translate(0.55244 0.36782)">
-      <path id="SVGID-2" data-name="SVGID" class="cls-2" d="M.752,12.41943A1.31776,1.31776,0,0,1,.363,11.39584,1.31549,1.31549,0,0,1,.752,10.37225l9.5181-9.31761a1.40146,1.40146,0,0,1,1.95218,0,1.33335,1.33335,0,0,1,0,1.91132L4.98889,10.045h25.009a1.35069,1.35069,0,1,1,0,2.70075H4.98889l7.23342,7.08082a1.33128,1.33128,0,0,1,0,1.90957,1.40146,1.40146,0,0,1-1.95218,0Z"/>
-    </clipPath>
-    <clipPath id="clip-path-3" transform="translate(0.55244 0.36782)">
-      <rect id="SVGID-3" data-name="SVGID" class="cls-1" x="-11.56879" y="-16.04236" width="57.26172" height="57.26172"/>
-    </clipPath>
-  </defs>
-  <g class="cls-3">
-    <g class="cls-4">
-      <g class="cls-5">
-        <g class="cls-6">
-          <rect class="cls-7" width="32.82465" height="23.52644"/>
-        </g>
-      </g>
-    </g>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 320 512" style="enable-background:new 0 0 320 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<path class="st0" d="M34.5,239L228.9,44.7c9.4-9.4,24.6-9.4,33.9,0l22.7,22.7c9.4,9.4,9.4,24.5,0,33.9L131.5,256l154,154.8
+	c9.3,9.4,9.3,24.5,0,33.9l-22.7,22.7c-9.4,9.4-24.6,9.4-33.9,0L34.5,273C25.2,263.6,25.2,248.4,34.5,239z"/>
 </svg>

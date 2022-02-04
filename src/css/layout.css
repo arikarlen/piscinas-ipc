@@ -34,6 +34,10 @@
     --color-hover-main:#0099e6;
     --color-text-black:#1d1d1f;
     --color-practipool-main:#1385A7;
+    --color-practipool-secundary:#1a3f51;
+
+    --color-fun:#ffa500;
+    --color-jump:#009cde;
     /*Transitions*/
     --standar-transition: 0.3s ease-in all;
     --fast-transition: 0.1s ease-in all;
@@ -131,6 +135,11 @@ h5 {
 ul {
     padding: 0;
 }
+
+.text-white {
+    color:var(--color-white-full)
+}
+
 
 
 /**********Buttons*/
@@ -446,6 +455,7 @@ img.iconCinta {
 #slideComponents {
     background-color: var(--color-secondary);
     padding: 0;
+    max-height: 400px;
 }
 #slideComponents h2 {
     color:#fff;
@@ -461,6 +471,11 @@ img.iconCinta {
     left: 20%;
     top: 10%;
     text-align: left;
+    
+}
+
+.carousel-caption p {
+    color:var(--color-white-full)!important;
 }
 
 
@@ -635,6 +650,139 @@ img.potenciado {
     width: 150px;
 }
 
+
+/****Internas Piscinas*/
+#modelos {
+    margin-top: 150px;
+}
+
+#modelos .col-lg-2 {
+    width: 20%;
+}
+
+#modelos h3 {
+    margin:50px auto
+}
+
+#modelos img {
+    width: 60%;
+    margin-top: 20px;
+}
+
+#contentInterns {
+    margin-top: 150px;
+    padding: 0;
+}
+
+#titlePools {
+    margin-top: 50px;
+}
+
+div#titlePools .row {
+    margin: 80px 0;
+}
+
+#titlePools img {
+    width: 150px;
+    float: right;
+}
+
+.carousel-caption h1.text-white {
+    position: absolute;
+    bottom: 70px;
+}
+
+#piscinas .carousel-item {
+    max-height: 650px;
+}
+
+#caracteristicas {
+    background-color: #fafbff;
+}
+
+ul.listPileta {
+    margin-top: 36px;
+    padding-left: 5px;
+}
+
+.listPileta li {
+    color: var(--color-main);
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 5px;
+}
+
+.listPileta span {
+    padding:0 0 0 10px
+}
+
+.listPileta i.fas.fa-circle {
+    font-size: 16px;
+    margin-right: 25px;
+    color: var(--color-secondary);
+}
+
+.listPileta .Si {
+    background-color: #e8f0f4;
+    border-radius: 22.5px;
+    height: 45px;
+    padding: 5px 10px;
+}
+#modelosInternos {
+    background-color: var(--color-white-full);
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+#modelosInternos h4 {
+    font-family: 'Open Sans', sans-serif;
+    color: #777777;
+    font-weight: 400;
+}
+
+.tituloTabla {
+   
+    font-size: 22px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 21px;
+    letter-spacing: normal;
+    color: #000;
+    padding: 1em 0;
+    border-bottom: 1px solid #ccc;
+    margin: 2em 0 !important;
+}
+
+#modelos h6 {
+    text-align: center;
+    font-size: 25px;
+    color: #000000;
+    font-weight: normal;
+}
+
+#componentes {
+    padding-top: 80px;
+}
+.nav-tabs {
+    border:none
+}
+.nav-tabs .nav-link, .nav-tabs .nav-link.active {
+    background-color: var(--color-white-full);
+    font-weight: 700;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border:#fff
+}
+
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link.active  {
+    box-shadow: 1px 1px 20px #ccc !important;
+}
+
+.componente {
+    margin-bottom: 20px;
+}
+
 /*Pagina Empresa*/
 #imageLayer {
     background-image: url(../assets/banner-empresa_01-min.jpg);
@@ -677,9 +825,7 @@ img.potenciado {
     padding: 15px;
     margin-bottom: 20px;
 }
-img {
-    width: 100%;
-}
+
 
 .margin-seccion {
     margin-top: 100px;
@@ -778,9 +924,20 @@ img {
     padding-bottom: 150px;
 }
 
-#bannerPractipool p {
-    color:var(--color-white-full)
+
+#bannerPractipool .cardsIpc {
+    background-color: var(--color-practipool-secundary);
 }
+
+
+.fun {
+    border-top:5px solid var(--color-fun)
+}
+
+.jump {
+    border-top:5px solid var(--color-jump)
+}
+
 @media (min-width: 1024px) and (max-width:1200px) {
     .section-numbers .carousel-caption {
         right: 10%;
