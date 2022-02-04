@@ -19,11 +19,11 @@ export const Piscinas = () => {
 
           <ul>
             <li>
-              <a href="/fun/"> Fun</a>
+              <a href="/practipool/fun"> Fun</a>
             </li>
 
             <li>
-              <a href="/jump/"> Jump</a>
+              <a href="/practipool/jump"> Jump</a>
             </li>
 
             <li>

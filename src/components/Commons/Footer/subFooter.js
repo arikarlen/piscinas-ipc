@@ -17,8 +17,6 @@ export const SubFooter = () => {
       });
   }, []);
 
-  const imagen = process.env.REACT_APP_URL_API + logoFooter.url;
-
   return (
     <Container fluid id="subFooter">
       <Container>
