@@ -12,7 +12,7 @@ import {
 import axios from "axios";
 import NuestrasPiscinas from "../../components/Commons/nuestrasPiscinas";
 
-export const Jump = () => {
+export const Family = () => {
   const [key, setKey] = useState("home");
   const [pool, setPool] = useState([]);
   const [logoPool, setLogoPool] = useState([]);
@@ -21,7 +21,7 @@ export const Jump = () => {
   const [loadedData, setLoadedData] = useState(false);
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_URL_API}/piscinas/2`).then((res) => {
+    axios.get(`${process.env.REACT_APP_URL_API}/piscinas/3`).then((res) => {
       setPool(res.data);
       setLogoPool(res.data.Logo);
       setSlidePool(res.data.Slide);
@@ -104,7 +104,7 @@ export const Jump = () => {
             <Row id="titleModelos">
               {loadedData ? (
                 pool.Modelos.map((modelo, i) => (
-                  <Col className="text-center" lg={6} key={modelo.id}>
+                  <Col className="text-center" lg={4} key={modelo.id}>
                     <p>{pool.Modelo}</p>
                     <h2>{modelo.Nombre}</h2>
                   </Col>
@@ -116,7 +116,7 @@ export const Jump = () => {
             <Row>
               {loadedData ? (
                 pool.Modelos.map((modelo, i) => (
-                  <Col className="text-center" lg={6} key={modelo.id}>
+                  <Col className="text-center" lg={4} key={modelo.id}>
                     {modelo.Imagen.url ? (
                       <img
                         src={process.env.REACT_APP_URL_API + modelo.Imagen.url}
@@ -138,7 +138,7 @@ export const Jump = () => {
               <h3 className="tituloTabla">Casco</h3>
               {loadedData ? (
                 pool.Modelos.map((casco, i) => (
-                  <Col className="text-center" lg={6} key={casco.id}>
+                  <Col className="text-center" lg={4} key={casco.id}>
                     <h6>{casco.Casco}</h6>
                   </Col>
                 ))
@@ -150,7 +150,7 @@ export const Jump = () => {
               <h3 className="tituloTabla">Profundidad</h3>
               {loadedData ? (
                 pool.Modelos.map((profundidad, i) => (
-                  <Col className="text-center" lg={6} key={profundidad.id}>
+                  <Col className="text-center" lg={4} key={profundidad.id}>
                     <h6>{profundidad.Profundidad}</h6>
                   </Col>
                 ))
@@ -162,7 +162,7 @@ export const Jump = () => {
               <h3 className="tituloTabla">Volumen</h3>
               {loadedData ? (
                 pool.Modelos.map((volumen, i) => (
-                  <Col className="text-center" lg={6} key={volumen.id}>
+                  <Col className="text-center" lg={4} key={volumen.id}>
                     <h6>{volumen.Volumen}</h6>
                   </Col>
                 ))
@@ -174,7 +174,7 @@ export const Jump = () => {
               <h3 className="tituloTabla">Piscina</h3>
               {loadedData ? (
                 pool.Modelos.map((piscina, i) => (
-                  <Col className="text-center" lg={6} key={piscina.id}>
+                  <Col className="text-center" lg={4} key={piscina.id}>
                     <h6>{piscina.Piscina}</h6>
                   </Col>
                 ))
@@ -227,7 +227,7 @@ export const Jump = () => {
                 <Row>
                   {loadedData ? (
                     pool.Opcionales.map((opcional, i) => (
-                      <Col lg={4}>
+                      <Col lg={3}>
                         {opcional.Imagen.url ? (
                           <img
                             src={
@@ -260,4 +260,4 @@ export const Jump = () => {
   );
 };
 
-export default Jump;
+export default Family;

@@ -12,7 +12,7 @@ import {
 import axios from "axios";
 import NuestrasPiscinas from "../../components/Commons/nuestrasPiscinas";
 
-export const Jump = () => {
+export const Relax = () => {
   const [key, setKey] = useState("home");
   const [pool, setPool] = useState([]);
   const [logoPool, setLogoPool] = useState([]);
@@ -21,7 +21,7 @@ export const Jump = () => {
   const [loadedData, setLoadedData] = useState(false);
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_URL_API}/piscinas/2`).then((res) => {
+    axios.get(`${process.env.REACT_APP_URL_API}/piscinas/5`).then((res) => {
       setPool(res.data);
       setLogoPool(res.data.Logo);
       setSlidePool(res.data.Slide);
@@ -101,7 +101,7 @@ export const Jump = () => {
             <p className="text-center">
               Las medidas indicadas son externas, de extremo a extremo.
             </p>
-            <Row id="titleModelos">
+            <Row id="titleModelos" data-aos="zoom-in " data-aos-offset="200">
               {loadedData ? (
                 pool.Modelos.map((modelo, i) => (
                   <Col className="text-center" lg={6} key={modelo.id}>
@@ -134,11 +134,15 @@ export const Jump = () => {
                 <p>Cargando...</p>
               )}
             </Row>
-            <Row className="casco">
+            <Row
+              className="casco"
+              data-aos="fade-down"
+              data-aos-duration="2000"
+            >
               <h3 className="tituloTabla">Casco</h3>
               {loadedData ? (
                 pool.Modelos.map((casco, i) => (
-                  <Col className="text-center" lg={6} key={casco.id}>
+                  <Col className="text-center" lg={4} key={casco.id}>
                     <h6>{casco.Casco}</h6>
                   </Col>
                 ))
@@ -146,7 +150,11 @@ export const Jump = () => {
                 <p>Cargando...</p>
               )}
             </Row>
-            <Row className="profundidad">
+            <Row
+              className="profundidad"
+              data-aos="fade-down"
+              data-aos-duration="2000"
+            >
               <h3 className="tituloTabla">Profundidad</h3>
               {loadedData ? (
                 pool.Modelos.map((profundidad, i) => (
@@ -158,7 +166,11 @@ export const Jump = () => {
                 <p>Cargando...</p>
               )}
             </Row>
-            <Row className="volumen">
+            <Row
+              className="volumen"
+              data-aos="fade-down"
+              data-aos-duration="2000"
+            >
               <h3 className="tituloTabla">Volumen</h3>
               {loadedData ? (
                 pool.Modelos.map((volumen, i) => (
@@ -170,7 +182,11 @@ export const Jump = () => {
                 <p>Cargando...</p>
               )}
             </Row>
-            <Row className="piscina">
+            <Row
+              className="piscina"
+              data-aos="fade-down"
+              data-aos-duration="2000"
+            >
               <h3 className="tituloTabla">Piscina</h3>
               {loadedData ? (
                 pool.Modelos.map((piscina, i) => (
@@ -227,7 +243,7 @@ export const Jump = () => {
                 <Row>
                   {loadedData ? (
                     pool.Opcionales.map((opcional, i) => (
-                      <Col lg={4}>
+                      <Col lg={3} key={opcional.id}>
                         {opcional.Imagen.url ? (
                           <img
                             src={
@@ -260,4 +276,4 @@ export const Jump = () => {
   );
 };
 
-export default Jump;
+export default Relax;
