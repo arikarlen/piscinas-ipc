@@ -1,0 +1,946 @@
+/*Identificadores de Ambientes*/
+.warning {
+    text-align: center;
+    font-size: 10px;
+    position: fixed;
+    right: 0;
+    top:0;
+    padding: 5px 10px;
+    z-index: 99;
+}
+
+.dev {
+    background-color: crimson;
+    color: #fff;
+}
+
+.staging {
+    background-color: darkgoldenrod;
+    color: #fff;
+}
+/****************************Inicio*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Prompt:wght@200;400;500;700&display=swap');
+:root {
+   
+   
+    --color-main: #054172;
+    --color-secondary: #0071e3;
+    --color-black: #231f20;
+    --color-white-full:#fff;
+    --color-white:#fafbff;
+    --color-brown: #746050;
+    --color-grey:#777;
+    --color-dark-grey:#262626;
+    --color-hover-main:#0099e6;
+    --color-text-black:#1d1d1f;
+    --color-practipool-main:#1385A7;
+    --color-practipool-secundary:#1a3f51;
+
+    --color-fun:#ffa500;
+    --color-jump:#009cde;
+    /*Transitions*/
+    --standar-transition: 0.3s ease-in all;
+    --fast-transition: 0.1s ease-in all;
+    /*Cards*/
+    --card-radius: 8px;
+    --card-shadow: 0 0 16px 0 rgb(0 0 0 / 8%);
+    --card-shadow-hover: 0 0 16px 0 rgb(0 0 0 / 24%) !important;
+    --card-padding: 20px 22px;
+}
+
+
+html {
+    overflow-x: hidden;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: var(--color-white);
+    color:var(--color-grey)
+}
+
+.container-fluid {
+    width: 101%;
+}
+
+a {
+    text-decoration: none;
+    transition: var(--standar-transition);
+}
+a:hover {
+    text-decoration: none;
+    transition: var(--standar-transition);
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    font-size: 15px;
+    color: var(--color-grey);
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Prompt';
+     font-stretch: normal;
+    font-style: normal;
+    
+    letter-spacing: normal;
+    color: var(--color-main);
+}
+
+h1{
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 60px;
+   
+}
+
+h2 {
+   
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 48px;
+}
+
+h3 {
+    
+    font-size: 24px;
+    font-weight: 600;
+   line-height: 38px;
+}
+
+h4 {
+   
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: normal;
+}
+
+h5 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19px!important;
+    font-weight: normal!important;
+    font-stretch: normal;
+    font-style: normal!important;
+    line-height: 24px;
+    letter-spacing: normal;
+}
+
+ul {
+    padding: 0;
+}
+
+.text-white {
+    color:var(--color-white-full)
+}
+
+
+
+/**********Buttons*/
+.btn-primary {
+    border: none;
+    color: var(--color-white-full)!important;
+    background-color: var(--color-secondary) !important;
+    border-color: var(--color-secondary) !important;
+    margin-top: 25px;
+    font-size: 13px;
+    padding: 15px 30px;
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-hover-main)!important;
+}
+
+button.btn.btn-secondary {
+    border: transparent;
+    background-color: transparent;
+    
+    color: var(--color-secondary);
+    font-weight: 700;
+    text-decoration: none !important;
+    cursor: pointer;
+   
+}
+
+
+
+
+
+i.fas.fa-chevron-right {
+    margin-left: 5px;
+}
+
+/****Componentes*/
+
+.backsHome {
+    position: relative;
+    background-color: var(--color-white);
+}
+
+.cardsIpc {
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+    background-color: var(--color-white-full);
+    padding: var(--card-padding);
+    transition: var(--standar-transition);
+}
+
+.subtitulo {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.text-white {
+    color:#fff
+}
+
+@keyframes pulse {
+0% {
+    box-shadow:  var(--color-secondary) 0 0 0 0;
+}
+75% {
+    box-shadow: #ff69b400 0 0 0 16px;
+}
+}
+
+/****Menu*/
+
+
+
+
+.navbar .megamenu{ 
+    padding: 0;
+    font-family: 'Prompt';
+    border-radius: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    font-family: 'Prompt';
+    color: var(--color-white);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: capitalize;
+    letter-spacing: 0;
+
+}
+
+.navbar-brand img {
+    width: 70%;
+    filter: brightness(0) invert(1);
+    transition: var(--fast-transition);
+}
+
+li.nav-item {
+    margin: 0 40px 0 0;
+}
+
+.btn-presupuestar {
+    background-color: var(--color-secondary);
+    border-radius: 40px;
+    padding: 0 30px;
+    transition: var(--standar-transition);
+    animation: pulse 1500ms infinite;
+}
+
+.btn-presupuestar a:before {
+    content: url(../assets/presup-ico.png);
+    margin-right: 5px;
+    position: relative;
+    top: 3px;
+}
+
+.btn-presupuestar:hover {
+    background-color: var(--color-main)!important;
+}
+
+.navbar-collapse {
+    
+    flex-grow: 0;
+    
+}
+
+.dropdown-menu p{
+    font-size: 14px;
+    color:var(--color-dark-grey)
+}
+
+.has-megamenu:hover i {
+    transform: rotate(180deg);
+    transition: var(--fast-transition); 
+}
+
+i {
+    transition: var(--fast-transition); 
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    border-top: none; 
+     border-right: none; 
+    border-bottom: none; 
+     border-left: none; 
+}
+
+
+.boxMenu {
+    min-height: 350px;
+    padding: 60px 50px 50px 50px;
+    
+}
+
+.boxMenu p, .boxMenu h1 {
+    color:var(--color-white)
+}
+
+.opcionesMenu {
+    padding: 50px 0 50px 50px;
+}
+
+.opcionesMenu h3 a {
+    color: var(--color-main);
+}
+
+.opcionesMenu li {
+    margin-bottom: 20px;
+}
+
+.opcionesMenu li a {
+    color: #777;
+    font-size: 15px;
+    padding: 8px 0!important;
+    font-family: 'Open Sans', sans-serif;;
+    
+}
+
+.opcionesMenu li a:hover, .opcionesMenu h3 a:hover {
+    color:var(--color-secondary)
+}
+
+.boxPiscinas {
+    background-color: var(--color-main);
+}
+
+.boxAccesorios {
+    background-color: var(--color-brown);
+}
+
+.changeColor {
+    background-color: #fff;
+}
+
+.changeColor  .nav-link {
+    color:var(--color-main)!important;
+    transition: var(--standar-transition);
+}
+
+.changeColor .btn-presupuestar .nav-link {
+    color: #fff!important;
+}
+
+.changeColor .navbar-brand img {
+    width: 40%;
+    filter: none;
+    transition: var(--fast-transition);
+}
+/*Esta clase es para agregar a un div dentro de todas las columnas que no son fullwidth*/
+.columnInner {
+    padding-left:15px ;
+    padding-right: 15px;
+}
+
+/*************Slider*/
+#videoContainer {
+    pointer-events: none;
+    
+}
+
+#videoLayer {
+    padding: 0;
+    position: fixed;
+    top:-180px
+}
+
+
+.video-responsive {
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	position: relative;
+	}
+
+.video-responsive iframe, .video-responsive object, .video-responsive embed {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	}
+
+
+/*************Wave*/
+
+
+#wave {
+     background: url(../assets/Waveblanca-01.svg) no-repeat;
+    position: relative!important;
+    height: 280px;
+    background-size: cover;
+    bottom: 0px !important;
+    margin-top: 550px;
+    } 
+
+
+/*************Cinta*/
+   
+img.iconCinta {
+    width: 17%!important;
+    float: left;
+    margin: 0 20px 0 0;
+    }
+
+/***********Nuestras piscinas*/
+
+#nuestrasPiscinas {
+    padding-top: 90px;
+    padding: 90px 0;
+}
+
+#contentPiscinas {
+    margin: 90px 0 0 0;
+}
+
+#contentPiscinas .cardsIpc:hover {
+    box-shadow: var(--card-shadow-hover);
+    transition: var(--standar-transition);
+    
+}
+
+
+
+#contentPiscinas .cardMedium {
+    margin: 0 2%;
+}
+
+#contentPiscinas img {
+    width: 50%;
+    margin-bottom: 50px;
+    transition: var(--standar-transition);
+}
+
+#contentPiscinas .cardsIpc:hover img{
+    width: 55%;
+    transition: var(--standar-transition);
+}
+
+#contentPiscinas .cardsIpc {
+    padding: 30px 20px 10px 20px;
+    height: 250px;
+    max-height: 250px;
+}
+
+
+/*****Slide componentes*/
+
+#slideComponents {
+    background-color: var(--color-secondary);
+    padding: 0;
+    max-height: 400px;
+}
+#slideComponents h2 {
+    color:#fff;
+    text-align: left;
+}
+
+.titleSlide {
+    padding: 4% 6% 0 6%;
+}
+
+.carousel-caption {
+    right: 20%;
+    left: 20%;
+    top: 10%;
+    text-align: left;
+    
+}
+
+.carousel-caption p {
+    color:var(--color-white-full)!important;
+}
+
+
+/*****Planta e Produccion*/
+
+#plantaProduccion {
+    padding-top: 120px;
+}
+
+/**************Momentos*/
+div#catalogoMomentos {
+    padding-top: 4em;
+}
+
+div#catalogoMomentos .cardsIpc {
+    padding: 0!important;
+    min-height: 290px!important;
+}
+
+.catalogoMomentosTexts.col-lg-6 {
+    padding: 20px 0 20px 40px;
+}
+
+.imgCatalogo {
+    min-height: 290px;
+}
+
+.imgCatalogo, .imgMomentos {
+    background-image: url(../assets/img-catalogo.png);
+    height: auto;
+    border-radius: 0 10px 10px 0;
+    background-size: cover;
+}
+
+.imgMomentos {
+    background-image: url(../assets/momentosipc.png);
+    height: auto;
+    border-radius: 0 10px 10px 0;
+    background-size: cover;
+}
+
+
+/*************Footer*/
+
+#footer {
+    padding-top: 80px;
+    padding: 80px 0 0 0;
+}
+
+#btnsFotoer img {
+    width: 20%;
+    margin-bottom: 2em;
+    transition: 0.4s all;
+}
+
+div#btnsFotoer {
+    background: linear-gradient( 
+0deg
+ , var(--color-main) 50%, var(--color-white) 50%);
+    padding: 0 0 10px 0;
+    margin: 0;
+}
+
+#btnsFotoer a {
+    position: relative;
+    top:0px;
+    transition: 0.4s all;
+}
+
+#btnsFotoer a:hover {
+    position: relative;
+    top:-20px;
+    transition: 0.4s all;
+}
+
+#btnsFotoer a:hover .cardsipc {
+    background-color: var(--color-secondary)!important;
+}
+
+#btnsFotoer a:hover .cardsipc h3 {
+    color: var(--color-white-full)!important;
+}
+
+#subFooter {
+    background-color: var(--color-main) ;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+#subFooter h1 {
+    font-size: 31px;
+    color: var(--color-white-full);
+    line-height: 30px;
+}
+img.logoFooter {
+    width: 20%;
+    float: left;
+    margin-right: 15%;
+}
+
+.textLogoFooter {
+    width: 50%;
+    float: left;
+    border-left: 1px solid var(--color-white-full);
+    padding-left: 15%;
+}
+
+.list-footer li a {
+    font-size: 18px;
+    color:var(--color-white-full)
+}
+
+.list-footer {
+    width: 20%;
+    margin: 0 auto;
+}
+
+.icono-prefooter {
+    border: none;
+    margin: 0 !important;
+    float: inherit;
+    filter: brightness(5);
+    width: 13%;
+    padding: 0 12px 0 0;
+}
+
+ul.list-data {
+    list-style: none;
+    align-items: center;
+    display: flex;
+    text-align: left !important;
+    margin-bottom: 2em !important;
+}
+
+.list-data li {
+    width: fit-content;
+    display: contents;
+    color: var(--color-white-full);
+    font-size: .9em;
+}
+
+
+.list-data li a {
+    color:var(--color-white-full)
+}
+
+#subFooter   i.fab {
+    color: white;
+    font-size: 3em;
+}
+
+ul.list-redes {
+    list-style: none;
+    display: flex;
+    margin-left: 3em !important;
+}
+
+.list-redes li {
+    padding: 1em !important;
+}
+
+div#footerBottom {
+    background-color: #324D77;
+    
+}
+
+#footerBottom p {
+    font-size: 13px;
+    color: #fff;
+}
+
+img.potenciado {
+    width: 150px;
+}
+
+
+/****Internas Piscinas*/
+#modelos {
+    margin-top: 150px;
+}
+
+#modelos .col-lg-2 {
+    width: 20%;
+}
+
+#modelos h3 {
+    margin:50px auto
+}
+
+#modelos img {
+    width: 60%;
+    margin-top: 20px;
+}
+
+#contentInterns {
+    margin-top: 150px;
+    padding: 0;
+}
+
+#titlePools {
+    margin-top: 50px;
+}
+
+div#titlePools .row {
+    margin: 80px 0;
+}
+
+#titlePools img {
+    width: 150px;
+    float: right;
+}
+
+.carousel-caption h1.text-white {
+    position: absolute;
+    bottom: 70px;
+}
+
+#piscinas .carousel-item {
+    max-height: 650px;
+}
+
+#caracteristicas {
+    background-color: #fafbff;
+}
+
+ul.listPileta {
+    margin-top: 36px;
+    padding-left: 5px;
+}
+
+.listPileta li {
+    color: var(--color-main);
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 5px;
+}
+
+.listPileta span {
+    padding:0 0 0 10px
+}
+
+.listPileta i.fas.fa-circle {
+    font-size: 16px;
+    margin-right: 25px;
+    color: var(--color-secondary);
+}
+
+.listPileta .Si {
+    background-color: #e8f0f4;
+    border-radius: 22.5px;
+    height: 45px;
+    padding: 5px 10px;
+}
+#modelosInternos {
+    background-color: var(--color-white-full);
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+#modelosInternos h4 {
+    font-family: 'Open Sans', sans-serif;
+    color: #777777;
+    font-weight: 400;
+}
+
+.tituloTabla {
+   
+    font-size: 22px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 21px;
+    letter-spacing: normal;
+    color: #000;
+    padding: 1em 0;
+    border-bottom: 1px solid #ccc;
+    margin: 2em 0 !important;
+}
+
+#modelos h6 {
+    text-align: center;
+    font-size: 25px;
+    color: #000000;
+    font-weight: normal;
+}
+
+#componentes {
+    padding-top: 80px;
+}
+.nav-tabs {
+    border:none
+}
+.nav-tabs .nav-link, .nav-tabs .nav-link.active {
+    background-color: var(--color-white-full);
+    font-weight: 700;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border:#fff
+}
+
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link.active  {
+    box-shadow: 1px 1px 20px #ccc !important;
+}
+
+.componente {
+    margin-bottom: 20px;
+}
+
+/*Pagina Empresa*/
+#imageLayer {
+    background-image: url(../assets/banner-empresa_01-min.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.text-white {
+    color: var(--color-white-full);
+}
+.backpilares, .backpilares .col-lg-12 {
+    padding: 0;
+}
+.color-lightblue {
+    color: var(--color-secondary);
+}
+.col-titlepilares {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.padd-section {
+    padding: 100px 0px;
+}
+.text-pilares {
+    margin-top: 0;
+    color: var(--color-main);
+}
+#section-pilares {
+    background-color: #fff !important;
+}
+.hover-section:hover {
+    background-color: #fafbff;
+    border-radius: 15px;
+}
+.hover-section {
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+
+.margin-seccion {
+    margin-top: 100px;
+}
+
+#section-expansion {
+    background-color: #f5f5f7 !important;
+}
+
+.img-mendoza {
+    background-image: url(../assets/mendoza_image-min.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 58vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.img-mountain {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.img-mountain h1 {
+    padding: 55px 0;
+}
+.texto-crecimiento p {
+    color: var(--color-text-black);
+    font-weight: 700;
+    line-height: 1.8;
+}
+.contenido-slider.carousel-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.ipc-numeros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 0px;
+}
+.borde-rght {
+    border-right: 1px solid var(--color-main);
+    height: 20vh;
+}
+.ipc-numeros h2 {
+    margin: 0px;
+    color: var(--color-black);
+}
+.ipc-numeros h2 {
+    margin: 0px;
+    color: var(--color-black);
+}
+.number-big {
+    font-size: 86px;
+    font-weight: 600;
+    color: var(--color-secondary);
+    font-family: 'Prompt';
+    line-height: 0.6;
+    padding-top: 32px;
+}
+.ipc-numeros p {
+    color: var(--color-main);
+    font-weight: 700;
+    font-size: 23px;
+    font-family: 'Lato';
+}
+.carousel-control-prev-icon {
+    background-image: url(../assets/left-arrow-04.svg);
+}
+.carousel-control-next-icon {
+    background-image: url(../assets/right-arrow-04.svg);
+}
+.carousel-control-prev{
+    margin-left: 27px;
+    justify-content: inherit;
+}
+.carousel-control-next {
+    margin-right: 27px;
+    justify-content: right;
+}
+.carousel-control-next, .carousel-control-prev {
+    opacity: 1;
+}
+.carousel-indicators {
+    display: none;
+}
+
+/*****************Practipool*/
+
+#bannerPractipool {
+    background-color: var(--color-practipool-main);
+    padding-top: 250px!important;
+    padding-bottom: 150px;
+}
+
+
+#bannerPractipool .cardsIpc {
+    background-color: var(--color-practipool-secundary);
+}
+
+
+.fun {
+    border-top:5px solid var(--color-fun)
+}
+
+.jump {
+    border-top:5px solid var(--color-jump)
+}
+
+@media (min-width: 1024px) and (max-width:1200px) {
+    .section-numbers .carousel-caption {
+        right: 10%;
+        left: 13%;
+    }
+}
