@@ -21,7 +21,7 @@ export const NuestrasPiscinas = () => {
         </Row>
         <Row id="contentPiscinas" className="text-center">
           <Col lg={4}>
-            <Link to="/page2">
+            <Link to="/practipool/">
               <div
                 className="cardsIpc "
                 data-aos="zoom-in "

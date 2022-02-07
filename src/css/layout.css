@@ -35,6 +35,7 @@
     --color-text-black:#1d1d1f;
     --color-practipool-main:#1385A7;
     --color-practipool-secundary:#1a3f51;
+    --color-stylepool-main:#1a3240;
 
     --color-fun:#ffa500;
     --color-jump:#009cde;
@@ -232,10 +233,28 @@ i.fas.fa-chevron-right {
 
 }
 
+#headerInternos .navbar {
+    background-color: var(--color-white-full);
+}
+
+#headerInternos .navbar-dark .navbar-nav .nav-link {
+    color: var(--color-main)!important;
+}
+
+#headerInternos .navbar-dark .navbar-nav .btn-presupuestar .nav-link {
+color:var(--color-white-full)
+}
+
 .navbar-brand img {
     width: 70%;
     filter: brightness(0) invert(1);
     transition: var(--fast-transition);
+}
+
+#headerInternos .navbar-brand img {
+    
+    filter: none;
+    
 }
 
 li.nav-item {
@@ -652,6 +671,11 @@ img.potenciado {
 
 
 /****Internas Piscinas*/
+
+#piscinasInterno {
+    padding-top: 150px;
+}
+
 #modelos {
     margin-top: 150px;
 }
@@ -670,7 +694,7 @@ img.potenciado {
 }
 
 #contentInterns {
-    margin-top: 150px;
+    margin-top: 120px;
     padding: 0;
 }
 
@@ -739,6 +763,13 @@ ul.listPileta {
     font-weight: 400;
 }
 
+#titleModelos {
+    position: sticky;
+    top: 60px;
+    z-index: 99;
+    background-color:var(--color-white-full);
+}
+
 .tituloTabla {
    
     font-size: 22px;
@@ -761,13 +792,14 @@ ul.listPileta {
 }
 
 #componentes {
-    padding-top: 80px;
+    background-color: var(--color-white-full);
+    padding-bottom: 80px;
 }
 .nav-tabs {
     border:none
 }
 .nav-tabs .nav-link, .nav-tabs .nav-link.active {
-    background-color: var(--color-white-full);
+    background-color: var(--color-white);
     font-weight: 700;
     font-size: 15px;
     padding: 10px 20px;
@@ -777,6 +809,7 @@ ul.listPileta {
 
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link.active  {
     box-shadow: 1px 1px 20px #ccc !important;
+    background-color: var(--color-white);
 }
 
 .componente {
@@ -925,9 +958,20 @@ ul.listPileta {
 }
 
 
-#bannerPractipool .cardsIpc {
+#bannerPractipool img, #bannerStylepool img {
+    width: 100%;
+}
+
+#bannerPractipool .cardsIpc, #bannerStylepool .cardsIpc {
     background-color: var(--color-practipool-secundary);
 }
+
+#bannerStylepool {
+    background-color: var(--color-stylepool-main);
+    padding-top: 250px!important;
+    padding-bottom: 150px;
+}
+
 
 
 .fun {

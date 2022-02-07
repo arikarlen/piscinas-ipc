@@ -43,7 +43,7 @@ export const Header = () => {
         <div className="collapse navbar-collapse" id="main_nav">
           <ul className="navbar-nav">
             <li className="nav-item dropdown has-megamenu">
-              <a className="nav-link dropdown-toggle" href="/">
+              <a className="nav-link dropdown-toggle" href="/piscinas">
                 Piscinas <i className="fas fa-arrow-down"></i>
               </a>
               <div className="dropdown-menu megamenu" role="menu">

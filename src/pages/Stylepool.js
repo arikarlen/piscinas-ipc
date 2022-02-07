@@ -5,13 +5,13 @@ import Header from "../components/Commons/header";
 import CatalogoMomentos from "../components/Commons/catalogoMomentos";
 import NuestrasPiscinas from "../components/Commons/nuestrasPiscinas";
 
-export const Practipool = () => {
+export const Stylepool = () => {
   const [practipool, setpractipool] = useState([]);
   const [practipoolLogo, setpractipoolLogo] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_URL_API}/pages-practipool`)
+      .get(`${process.env.REACT_APP_URL_API}/pages-stylepool`)
       .then((res) => {
         setpractipool(res.data);
         setpractipoolLogo(res.data.Logo);
@@ -21,7 +21,7 @@ export const Practipool = () => {
   return (
     <Fragment>
       <Header />
-      <Container fluid id="bannerPractipool">
+      <Container fluid id="bannerStylepool">
         <Container>
           <Row>
             <Col lg={3}>
@@ -162,4 +162,4 @@ export const Practipool = () => {
   );
 };
 
-export default Practipool;
+export default Stylepool;
