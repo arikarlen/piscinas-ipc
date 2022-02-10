@@ -12,18 +12,20 @@ import {
 import axios from "axios";
 import NuestrasPiscinas from "../../components/Commons/nuestrasPiscinas";
 
-export const Relax = () => {
+export const Germana = () => {
   const [key, setKey] = useState("home");
   const [pool, setPool] = useState([]);
+  const [poolImg, setPoolImg] = useState([]);
   const [logoPool, setLogoPool] = useState([]);
   const [slidePool, setSlidePool] = useState([]);
 
   const [loadedData, setLoadedData] = useState(false);
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_URL_API}/piscinas/5`).then((res) => {
+    axios.get(`${process.env.REACT_APP_URL_API}/piscinas/8`).then((res) => {
       setPool(res.data);
       setLogoPool(res.data.Logo);
+      setPoolImg(res.data.Imagen_Inferior_Banner);
       setSlidePool(res.data.Slide);
       setLoadedData(true);
     });
@@ -78,21 +80,28 @@ export const Relax = () => {
             <p>Cargando...</p>
           )}
         </Carousel>
-        <Container id="caracteristicas">
-          <ul className="listPileta">
-            {loadedData ? (
-              pool.Caracteristicas.map((caracteristica, i) => (
-                <li key={caracteristica.id}>
-                  <i className="fas fa-circle"></i>
-                  <span className={caracteristica.Destacado}>
-                    {caracteristica.Item}
-                  </span>
-                </li>
-              ))
-            ) : (
-              <p>Cargando...</p>
-            )}
-          </ul>
+        <Container id="caracteristicasStylepool">
+          <Row>
+            <Col lg={4}>
+              {poolImg.url ? (
+                <img
+                  src={process.env.REACT_APP_URL_API + poolImg.url}
+                  className="img-fluid"
+                  data-aos="zoom-in"
+                  data-aos-offset="100"
+                  alt={poolImg.url}
+                ></img>
+              ) : (
+                <p>Cargando imagen</p>
+              )}
+            </Col>
+            <Col lg={8}>
+              <h4>
+                <strong>{pool.Titulo_Inferior_Banner}</strong>
+              </h4>
+              <h4>{pool.Descripcion_Inferior_Banenr}</h4>
+            </Col>
+          </Row>
         </Container>
         <Container fluid id="modelosInternos">
           <Container>
@@ -142,7 +151,7 @@ export const Relax = () => {
               <h3 className="tituloTabla">Casco</h3>
               {loadedData ? (
                 pool.Modelos.map((casco, i) => (
-                  <Col className="text-center" lg={4} key={casco.id}>
+                  <Col className="text-center" lg={6} key={casco.id}>
                     <h6>{casco.Casco}</h6>
                   </Col>
                 ))
@@ -276,4 +285,4 @@ export const Relax = () => {
   );
 };
 
-export default Relax;
+export default Germana;

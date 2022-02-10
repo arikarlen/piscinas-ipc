@@ -34,7 +34,7 @@ export const Spa = () => {
       <div id="headerInternos">
         <Header />
       </div>
-      <Container fluid id="contentInterns" className="jump">
+      <Container fluid id="contentInterns" className="spa">
         <Container id="titlePools">
           <Breadcrumb>
             <Breadcrumb.Item href="/">Home</Breadcrumb.Item>

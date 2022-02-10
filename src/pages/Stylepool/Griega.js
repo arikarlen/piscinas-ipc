@@ -12,29 +12,31 @@ import {
 import axios from "axios";
 import NuestrasPiscinas from "../../components/Commons/nuestrasPiscinas";
 
-export const Relax = () => {
+export const Griega = () => {
   const [key, setKey] = useState("home");
   const [pool, setPool] = useState([]);
+  const [poolImg, setPoolImg] = useState([]);
   const [logoPool, setLogoPool] = useState([]);
   const [slidePool, setSlidePool] = useState([]);
 
   const [loadedData, setLoadedData] = useState(false);
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_URL_API}/piscinas/5`).then((res) => {
+    axios.get(`${process.env.REACT_APP_URL_API}/piscinas/6`).then((res) => {
       setPool(res.data);
+      setPoolImg(res.data.Imagen_Inferior_Banner);
       setLogoPool(res.data.Logo);
       setSlidePool(res.data.Slide);
       setLoadedData(true);
     });
   }, []);
-
+  console.log(poolImg.url);
   return (
     <>
       <div id="headerInternos">
         <Header />
       </div>
-      <Container fluid id="contentInterns" className="relax">
+      <Container fluid id="contentInterns" className="jump">
         <Container id="titlePools">
           <Breadcrumb>
             <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
@@ -78,21 +80,28 @@ export const Relax = () => {
             <p>Cargando...</p>
           )}
         </Carousel>
-        <Container id="caracteristicas">
-          <ul className="listPileta">
-            {loadedData ? (
-              pool.Caracteristicas.map((caracteristica, i) => (
-                <li key={caracteristica.id}>
-                  <i className="fas fa-circle"></i>
-                  <span className={caracteristica.Destacado}>
-                    {caracteristica.Item}
-                  </span>
-                </li>
-              ))
-            ) : (
-              <p>Cargando...</p>
-            )}
-          </ul>
+        <Container id="caracteristicasStylepool">
+          <Row>
+            <Col lg={4}>
+              {poolImg.url ? (
+                <img
+                  src={process.env.REACT_APP_URL_API + poolImg.url}
+                  className="img-fluid"
+                  data-aos="zoom-in"
+                  data-aos-offset="100"
+                  alt={poolImg.url}
+                ></img>
+              ) : (
+                <p>Cargando imagen</p>
+              )}
+            </Col>
+            <Col lg={8}>
+              <h4>
+                <strong>{pool.Titulo_Inferior_Banner}</strong>
+              </h4>
+              <h4>{pool.Descripcion_Inferior_Banenr}</h4>
+            </Col>
+          </Row>
         </Container>
         <Container fluid id="modelosInternos">
           <Container>
@@ -104,7 +113,7 @@ export const Relax = () => {
             <Row id="titleModelos" data-aos="zoom-in " data-aos-offset="200">
               {loadedData ? (
                 pool.Modelos.map((modelo, i) => (
-                  <Col className="text-center" lg={6} key={modelo.id}>
+                  <Col className="text-center" lg={3} key={modelo.id}>
                     <p>{pool.Modelo}</p>
                     <h2>{modelo.Nombre}</h2>
                   </Col>
@@ -116,7 +125,7 @@ export const Relax = () => {
             <Row>
               {loadedData ? (
                 pool.Modelos.map((modelo, i) => (
-                  <Col className="text-center" lg={6} key={modelo.id}>
+                  <Col className="text-center" lg={3} key={modelo.id}>
                     {modelo.Imagen.url ? (
                       <img
                         src={process.env.REACT_APP_URL_API + modelo.Imagen.url}
@@ -142,7 +151,7 @@ export const Relax = () => {
               <h3 className="tituloTabla">Casco</h3>
               {loadedData ? (
                 pool.Modelos.map((casco, i) => (
-                  <Col className="text-center" lg={4} key={casco.id}>
+                  <Col className="text-center" lg={3} key={casco.id}>
                     <h6>{casco.Casco}</h6>
                   </Col>
                 ))
@@ -158,7 +167,7 @@ export const Relax = () => {
               <h3 className="tituloTabla">Profundidad</h3>
               {loadedData ? (
                 pool.Modelos.map((profundidad, i) => (
-                  <Col className="text-center" lg={6} key={profundidad.id}>
+                  <Col className="text-center" lg={3} key={profundidad.id}>
                     <h6>{profundidad.Profundidad}</h6>
                   </Col>
                 ))
@@ -174,7 +183,7 @@ export const Relax = () => {
               <h3 className="tituloTabla">Volumen</h3>
               {loadedData ? (
                 pool.Modelos.map((volumen, i) => (
-                  <Col className="text-center" lg={6} key={volumen.id}>
+                  <Col className="text-center" lg={3} key={volumen.id}>
                     <h6>{volumen.Volumen}</h6>
                   </Col>
                 ))
@@ -190,7 +199,7 @@ export const Relax = () => {
               <h3 className="tituloTabla">Piscina</h3>
               {loadedData ? (
                 pool.Modelos.map((piscina, i) => (
-                  <Col className="text-center" lg={6} key={piscina.id}>
+                  <Col className="text-center" lg={3} key={piscina.id}>
                     <h6>{piscina.Piscina}</h6>
                   </Col>
                 ))
@@ -276,4 +285,4 @@ export const Relax = () => {
   );
 };
 
-export default Relax;
+export default Griega;

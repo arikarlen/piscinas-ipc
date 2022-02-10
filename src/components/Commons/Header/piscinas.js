@@ -19,21 +19,21 @@ export const Piscinas = () => {
 
           <ul>
             <li>
-              <a href="/practipool/fun"> Fun</a>
+              <a href="/fun"> Fun</a>
             </li>
 
             <li>
-              <a href="/practipool/jump"> Jump</a>
+              <a href="/jump"> Jump</a>
             </li>
 
             <li>
-              <a href="/practipool/family/"> Family</a>
+              <a href="/family/"> Family</a>
             </li>
             <li>
-              <a href="/practipool/spa/"> Spa</a>
+              <a href="/spa/"> Spa</a>
             </li>
             <li>
-              <a href="/practipool/relax/"> Relax</a>
+              <a href="/relax/"> Relax</a>
             </li>
           </ul>
         </div>
@@ -46,7 +46,7 @@ export const Piscinas = () => {
 
           <ul>
             <li>
-              <a href="/griega/"> Griega</a>
+              <a href="/stylepool/griega/"> Griega</a>
             </li>
             <li>
               <a href="/americana/"> Americana</a>
