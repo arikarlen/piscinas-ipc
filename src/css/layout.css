@@ -36,9 +36,18 @@
     --color-practipool-main:#1385A7;
     --color-practipool-secundary:#1a3f51;
     --color-stylepool-main:#1a3240;
+    --color-luxury-dark:#030200;
+    --color-accesorios:#b39b8b; 
+
 
     --color-fun:#ffa500;
     --color-jump:#009cde;
+    --color-family:#76b730;
+    --color-spa:#005e85;
+    --color-relax:#582e70;
+    --color-griega:#86adce;
+    --color-attenuar:#b39b8b;
+    --color-attenuar-caribe:#eae3dc;
     /*Transitions*/
     --standar-transition: 0.3s ease-in all;
     --fast-transition: 0.1s ease-in all;
@@ -694,7 +703,7 @@ img.potenciado {
 }
 
 #contentInterns {
-    margin-top: 120px;
+    margin-top: 125px;
     padding: 0;
 }
 
@@ -761,6 +770,10 @@ ul.listPileta {
     font-family: 'Open Sans', sans-serif;
     color: #777777;
     font-weight: 400;
+}
+
+#modelosInternos .col-lg-2 {
+    width: 20%;
 }
 
 #titleModelos {
@@ -965,14 +978,15 @@ ul.listPileta {
 #bannerPractipool .cardsIpc, #bannerStylepool .cardsIpc {
     background-color: var(--color-practipool-secundary);
 }
-
 #bannerStylepool {
     background-color: var(--color-stylepool-main);
     padding-top: 250px!important;
     padding-bottom: 150px;
 }
 
-
+#caracteristicasStylepool {
+    padding: 60px 0;
+}
 
 .fun {
     border-top:5px solid var(--color-fun)
@@ -980,6 +994,155 @@ ul.listPileta {
 
 .jump {
     border-top:5px solid var(--color-jump)
+}
+
+.family {
+    border-top:5px solid var(--color-family)
+}
+
+.spa {
+    border-top:5px solid var(--color-spa)
+}
+
+.relax {
+    border-top:5px solid var(--color-relax)
+}
+
+.griega {
+    border-top:5px solid var(--color-griega)
+}
+
+
+
+#bannerStylepool .cardsIpc img {
+    width: 50%;
+}
+
+#bannerLuxury {
+    background-color: var(--color-luxury-dark);
+    padding-top: 120px!important;
+    padding-bottom: 150px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#bannerLuxury h1 {
+    font-size: 38px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: left !important;
+    margin-bottom: 60px !important;
+}
+
+.contentCaractesticasLuxury {
+    margin-top:120px
+}
+
+#luxuryMasInfo {
+    background-color: var(--color-luxury-dark);
+    padding: 5em 0;
+}
+
+#luxuryMasInfo .btn-secondary {
+    color: #fff;
+    background-color:var(--color-luxury-dark);
+    border: solid 2px var(--color-white-full);
+    margin-top: 60px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+
+.contentBanner {
+    padding: 150px 50px 0 0;
+}
+
+.contentBanner p{
+    color: var(--color-white-full);
+}
+
+#bannerAccesorios {
+    background-color: var(--color-luxury-dark);
+    padding-top: 250px!important;
+    padding-bottom: 150px;
+    background-image: url(../assets/Back-accesorios.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 850px;
+}
+
+#contentAccesorios .cardsIpc {
+    background-color: var(--color-accesorios);
+    padding: 10px;
+    max-height: 250px;
+    overflow: hidden;
+    transition: all ease-in 0.2s;
+}
+
+#contentAccesorios .cardsIpc:hover {
+    background-color: var(--color-accesorios);
+    padding: 10px;
+    max-height: 350px;
+    transition: all ease-in 0.2s;
+}
+
+#contentAccesorios h1 {
+    font-size: 28px;
+    line-height: 30px;
+}
+
+#bannerAccesoriosInternos {
+    background-color: var(--color-attenuar);
+    padding: 150px 0 4em 0;
+}
+
+#bannerAccesoriosInternos #mainTitle {
+    margin: 6em 0 0 0;
+}
+
+#bannerAccesoriosInternos .breadcrumb, #bannerAccesoriosInternos .breadcrumb a, #bannerAccesoriosInternos .breadcrumb-item.active, #bannerAccesoriosInternos .breadcrumb-item+.breadcrumb-item::before {
+    color:var(--color-white-full)!important
+}
+
+div#portada {
+    padding: 0;
+}
+
+#arenaCaribe {
+    background-color: var(--color-attenuar-caribe);
+}
+
+#arenaCaribe h2 {
+    margin-top: 50px;
+}
+#lineasAtenuar {
+    margin-top: 100px;
+}
+
+#lineasAtenuar h4 {
+    font-size: 19px!important;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 24px;
+    
+    color: #777777;
+    margin-top: 13px;
+}
+
+#lineasAtenuar .cardsIpc {
+    padding: 0 0 22px 0;
+    min-height: 570px;
+}
+
+#lineasAtenuar img {
+    border-radius: 8px 8px 0 0;
+}
+
+#lineasAtenuar h3, #lineasAtenuar p {
+    padding: 22px 22px 0 22px;
+}
+
+#cardLineas {
+    margin-top: 50px;
+    margin-bottom: 100px;
 }
 
 @media (min-width: 1024px) and (max-width:1200px) {

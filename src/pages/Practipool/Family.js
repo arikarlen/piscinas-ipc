@@ -34,7 +34,7 @@ export const Family = () => {
       <div id="headerInternos">
         <Header />
       </div>
-      <Container fluid id="contentInterns" className="jump">
+      <Container fluid id="contentInterns" className="family">
         <Container id="titlePools">
           <Breadcrumb>
             <Breadcrumb.Item href="/">Home</Breadcrumb.Item>

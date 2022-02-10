@@ -51,7 +51,7 @@ export const Header = () => {
               </div>
             </li>
             <li className="nav-item dropdown has-megamenu">
-              <a className="nav-link dropdown-toggle" href="/">
+              <a className="nav-link dropdown-toggle" href="/accesorios">
                 Accesorios <i className="fas fa-arrow-down"></i>
               </a>
               <div className="dropdown-menu megamenu" role="menu">

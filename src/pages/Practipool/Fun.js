@@ -28,7 +28,7 @@ export const Fun = () => {
       setLoadedData(true);
     });
   }, []);
-
+  console.log(slidePool);
   return (
     <>
       <div id="headerInternos">

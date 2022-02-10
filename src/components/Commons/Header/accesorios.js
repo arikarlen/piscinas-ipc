@@ -14,7 +14,7 @@ export const Accesorios = () => {
       <Col lg={3}>
         <div className="opcionesMenu">
           <h3>
-            <a href="attenuar">Attenuar</a>
+            <a href="/attenuar">Attenuar</a>
           </h3>
 
           <p>Pisos y revestimientos atérmicos para piscinas y soláriums</p>
@@ -23,7 +23,7 @@ export const Accesorios = () => {
       <Col lg={3}>
         <div className="opcionesMenu">
           <h3>
-            <a href="somma">Somma</a>
+            <a href="/somma">Somma</a>
           </h3>
 
           <p>Accesorios y equipamiento para piscinas</p>
@@ -32,7 +32,7 @@ export const Accesorios = () => {
       <Col lg={3}>
         <div className="opcionesMenu">
           <h3>
-            <a href="feel-design">Feel Design</a>
+            <a href="/feel-design">Feel Design</a>
           </h3>
 
           <p>Accesorios y equipamiento para piscinas</p>

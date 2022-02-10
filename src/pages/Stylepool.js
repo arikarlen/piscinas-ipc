@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import axios from "axios";
+import Card from "../components/Commons/Cards";
 import Header from "../components/Commons/header";
 import CatalogoMomentos from "../components/Commons/catalogoMomentos";
 import NuestrasPiscinas from "../components/Commons/nuestrasPiscinas";
@@ -63,27 +64,27 @@ export const Stylepool = () => {
             Las piscinas más elegidas del mercado.
           </p>
           <Row>
-            <Col lg={2} data-aos="zoom-in" data-aos-offset="300">
-              <a href="/practipool/fun">
-                <div className=" cardsIpc text-center">
+            <Col lg={4} data-aos="zoom-in" data-aos-offset="300">
+              <a href="/stylepool/griega/">
+                <Card>
                   {practipoolLogo.url ? (
                     <img
                       src={process.env.REACT_APP_URL_API + practipoolLogo.url}
-                      alt="/practipool/fun"
+                      alt="/stylepool/griega/"
                     ></img>
                   ) : (
                     <p>Cargando imagen</p>
                   )}
-                  <h3 className="text-white">Fun</h3>
+                  <h3 className="text-white">Griega</h3>
                   <Button variant="secondary">
                     Ver Mas<i className="fas fa-chevron-right"></i>
                   </Button>
-                </div>
+                </Card>
               </a>
             </Col>
-            <Col lg={2} data-aos="zoom-in" data-aos-offset="350">
-              <a href="/practipool/jump">
-                <div className=" cardsIpc text-center">
+            <Col lg={4} data-aos="zoom-in" data-aos-offset="350">
+              <a href="/stylepool/americana/">
+                <Card>
                   {practipoolLogo.url ? (
                     <img
                       src={process.env.REACT_APP_URL_API + practipoolLogo.url}
@@ -92,16 +93,16 @@ export const Stylepool = () => {
                   ) : (
                     <p>Cargando imagen</p>
                   )}
-                  <h3 className="text-white">Jump</h3>
+                  <h3 className="text-white">Americana</h3>
                   <Button variant="secondary">
                     Ver Mas<i className="fas fa-chevron-right"></i>
                   </Button>
-                </div>
+                </Card>
               </a>
             </Col>
-            <Col lg={2} data-aos="zoom-in" data-aos-offset="400">
+            <Col lg={4} data-aos="zoom-in" data-aos-offset="400">
               <a href="/trabaja-con-nosotros">
-                <div className=" cardsIpc text-center">
+                <Card>
                   {practipoolLogo.url ? (
                     <img
                       src={process.env.REACT_APP_URL_API + practipoolLogo.url}
@@ -110,47 +111,11 @@ export const Stylepool = () => {
                   ) : (
                     <p>Cargando imagen</p>
                   )}
-                  <h3 className="text-white">Family</h3>
+                  <h3 className="text-white">Germana</h3>
                   <Button variant="secondary">
                     Ver Mas<i className="fas fa-chevron-right"></i>
                   </Button>
-                </div>
-              </a>
-            </Col>
-            <Col lg={2} data-aos="zoom-in" data-aos-offset="450">
-              <a href="/trabaja-con-nosotros">
-                <div className=" cardsIpc text-center">
-                  {practipoolLogo.url ? (
-                    <img
-                      src={process.env.REACT_APP_URL_API + practipoolLogo.url}
-                      alt="Spa"
-                    ></img>
-                  ) : (
-                    <p>Cargando imagen</p>
-                  )}
-                  <h3 className="text-white">Spa</h3>
-                  <Button variant="secondary">
-                    Ver Mas<i className="fas fa-chevron-right"></i>
-                  </Button>
-                </div>
-              </a>
-            </Col>
-            <Col lg={2} data-aos="zoom-in" data-aos-offset="500">
-              <a href="/trabaja-con-nosotros">
-                <div className=" cardsIpc text-center">
-                  {practipoolLogo.url ? (
-                    <img
-                      src={process.env.REACT_APP_URL_API + practipoolLogo.url}
-                      alt="Relax"
-                    ></img>
-                  ) : (
-                    <p>Cargando imagen</p>
-                  )}
-                  <h3 className="text-white">Fun</h3>
-                  <Button variant="secondary">
-                    Ver Mas<i className="fas fa-chevron-right"></i>
-                  </Button>
-                </div>
+                </Card>
               </a>
             </Col>
           </Row>

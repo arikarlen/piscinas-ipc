@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import axios from "axios";
 import Header from "../components/Commons/header";
+import Card from "../components/Commons/Cards";
 import CatalogoMomentos from "../components/Commons/catalogoMomentos";
 import NuestrasPiscinas from "../components/Commons/nuestrasPiscinas";
 
@@ -65,7 +66,7 @@ export const Practipool = () => {
           <Row>
             <Col lg={2} data-aos="zoom-in" data-aos-offset="300">
               <a href="/practipool/fun">
-                <div className=" cardsIpc text-center">
+                <Card>
                   {practipoolLogo.url ? (
                     <img
                       src={process.env.REACT_APP_URL_API + practipoolLogo.url}
@@ -78,12 +79,12 @@ export const Practipool = () => {
                   <Button variant="secondary">
                     Ver Mas<i className="fas fa-chevron-right"></i>
                   </Button>
-                </div>
+                </Card>
               </a>
             </Col>
             <Col lg={2} data-aos="zoom-in" data-aos-offset="350">
               <a href="/practipool/jump">
-                <div className=" cardsIpc text-center">
+                <Card>
                   {practipoolLogo.url ? (
                     <img
                       src={process.env.REACT_APP_URL_API + practipoolLogo.url}
@@ -96,12 +97,12 @@ export const Practipool = () => {
                   <Button variant="secondary">
                     Ver Mas<i className="fas fa-chevron-right"></i>
                   </Button>
-                </div>
+                </Card>
               </a>
             </Col>
             <Col lg={2} data-aos="zoom-in" data-aos-offset="400">
               <a href="/trabaja-con-nosotros">
-                <div className=" cardsIpc text-center">
+                <Card>
                   {practipoolLogo.url ? (
                     <img
                       src={process.env.REACT_APP_URL_API + practipoolLogo.url}
@@ -114,12 +115,12 @@ export const Practipool = () => {
                   <Button variant="secondary">
                     Ver Mas<i className="fas fa-chevron-right"></i>
                   </Button>
-                </div>
+                </Card>
               </a>
             </Col>
             <Col lg={2} data-aos="zoom-in" data-aos-offset="450">
               <a href="/trabaja-con-nosotros">
-                <div className=" cardsIpc text-center">
+                <Card>
                   {practipoolLogo.url ? (
                     <img
                       src={process.env.REACT_APP_URL_API + practipoolLogo.url}
@@ -132,12 +133,12 @@ export const Practipool = () => {
                   <Button variant="secondary">
                     Ver Mas<i className="fas fa-chevron-right"></i>
                   </Button>
-                </div>
+                </Card>
               </a>
             </Col>
             <Col lg={2} data-aos="zoom-in" data-aos-offset="500">
               <a href="/trabaja-con-nosotros">
-                <div className=" cardsIpc text-center">
+                <Card>
                   {practipoolLogo.url ? (
                     <img
                       src={process.env.REACT_APP_URL_API + practipoolLogo.url}
@@ -150,7 +151,7 @@ export const Practipool = () => {
                   <Button variant="secondary">
                     Ver Mas<i className="fas fa-chevron-right"></i>
                   </Button>
-                </div>
+                </Card>
               </a>
             </Col>
           </Row>
