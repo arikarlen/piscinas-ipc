@@ -19,11 +19,11 @@ export const Piscinas = () => {
 
           <ul>
             <li>
-              <a href="/fun/"> Fun</a>
+              <a href="/fun"> Fun</a>
             </li>
 
             <li>
-              <a href="/jump/"> Jump</a>
+              <a href="/jump"> Jump</a>
             </li>
 
             <li>
@@ -41,12 +41,12 @@ export const Piscinas = () => {
       <Col lg={3}>
         <div className="opcionesMenu">
           <h3>
-            <a href="/style-pool/">Style Pool</a>
+            <a href="/stylepool/">Style Pool</a>
           </h3>
 
           <ul>
             <li>
-              <a href="/griega/"> Griega</a>
+              <a href="/stylepool/griega/"> Griega</a>
             </li>
             <li>
               <a href="/americana/"> Americana</a>

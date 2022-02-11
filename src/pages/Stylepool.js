@@ -1,18 +1,18 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import axios from "axios";
-import Header from "../components/Commons/header";
 import Card from "../components/Commons/Cards";
+import Header from "../components/Commons/header";
 import CatalogoMomentos from "../components/Commons/catalogoMomentos";
 import NuestrasPiscinas from "../components/Commons/nuestrasPiscinas";
 
-export const Practipool = () => {
+export const Stylepool = () => {
   const [practipool, setpractipool] = useState([]);
   const [practipoolLogo, setpractipoolLogo] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_URL_API}/pages-practipool`)
+      .get(`${process.env.REACT_APP_URL_API}/pages-stylepool`)
       .then((res) => {
         setpractipool(res.data);
         setpractipoolLogo(res.data.Logo);
@@ -22,7 +22,7 @@ export const Practipool = () => {
   return (
     <Fragment>
       <Header />
-      <Container fluid id="bannerPractipool">
+      <Container fluid id="bannerStylepool">
         <Container>
           <Row>
             <Col lg={3}>
@@ -64,26 +64,26 @@ export const Practipool = () => {
             Las piscinas más elegidas del mercado.
           </p>
           <Row>
-            <Col lg={2} data-aos="zoom-in" data-aos-offset="300">
-              <a href="/practipool/fun">
+            <Col lg={4} data-aos="zoom-in" data-aos-offset="300">
+              <a href="/stylepool/griega/">
                 <Card>
                   {practipoolLogo.url ? (
                     <img
                       src={process.env.REACT_APP_URL_API + practipoolLogo.url}
-                      alt="/practipool/fun"
+                      alt="/stylepool/griega/"
                     ></img>
                   ) : (
                     <p>Cargando imagen</p>
                   )}
-                  <h3 className="text-white">Fun</h3>
+                  <h3 className="text-white">Griega</h3>
                   <Button variant="secondary">
                     Ver Mas<i className="fas fa-chevron-right"></i>
                   </Button>
                 </Card>
               </a>
             </Col>
-            <Col lg={2} data-aos="zoom-in" data-aos-offset="350">
-              <a href="/practipool/jump">
+            <Col lg={4} data-aos="zoom-in" data-aos-offset="350">
+              <a href="/stylepool/americana/">
                 <Card>
                   {practipoolLogo.url ? (
                     <img
@@ -93,14 +93,14 @@ export const Practipool = () => {
                   ) : (
                     <p>Cargando imagen</p>
                   )}
-                  <h3 className="text-white">Jump</h3>
+                  <h3 className="text-white">Americana</h3>
                   <Button variant="secondary">
                     Ver Mas<i className="fas fa-chevron-right"></i>
                   </Button>
                 </Card>
               </a>
             </Col>
-            <Col lg={2} data-aos="zoom-in" data-aos-offset="400">
+            <Col lg={4} data-aos="zoom-in" data-aos-offset="400">
               <a href="/trabaja-con-nosotros">
                 <Card>
                   {practipoolLogo.url ? (
@@ -111,43 +111,7 @@ export const Practipool = () => {
                   ) : (
                     <p>Cargando imagen</p>
                   )}
-                  <h3 className="text-white">Family</h3>
-                  <Button variant="secondary">
-                    Ver Mas<i className="fas fa-chevron-right"></i>
-                  </Button>
-                </Card>
-              </a>
-            </Col>
-            <Col lg={2} data-aos="zoom-in" data-aos-offset="450">
-              <a href="/trabaja-con-nosotros">
-                <Card>
-                  {practipoolLogo.url ? (
-                    <img
-                      src={process.env.REACT_APP_URL_API + practipoolLogo.url}
-                      alt="Spa"
-                    ></img>
-                  ) : (
-                    <p>Cargando imagen</p>
-                  )}
-                  <h3 className="text-white">Spa</h3>
-                  <Button variant="secondary">
-                    Ver Mas<i className="fas fa-chevron-right"></i>
-                  </Button>
-                </Card>
-              </a>
-            </Col>
-            <Col lg={2} data-aos="zoom-in" data-aos-offset="500">
-              <a href="/trabaja-con-nosotros">
-                <Card>
-                  {practipoolLogo.url ? (
-                    <img
-                      src={process.env.REACT_APP_URL_API + practipoolLogo.url}
-                      alt="Relax"
-                    ></img>
-                  ) : (
-                    <p>Cargando imagen</p>
-                  )}
-                  <h3 className="text-white">Fun</h3>
+                  <h3 className="text-white">Germana</h3>
                   <Button variant="secondary">
                     Ver Mas<i className="fas fa-chevron-right"></i>
                   </Button>
@@ -163,4 +127,4 @@ export const Practipool = () => {
   );
 };
 
-export default Practipool;
+export default Stylepool;
