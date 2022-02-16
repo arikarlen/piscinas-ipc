@@ -31,13 +31,13 @@ export const Pilares = () => {
                 data-aos-offset="100"
               >
                 Tres pilares
-                <h1
-                  className="title-pilares color-blue"
-                  data-aos="zoom-in"
-                  data-aos-offset="110"
-                >
-                  que nos definen
-                </h1>
+              </h1>
+              <h1
+                className="title-pilares color-blue"
+                data-aos="zoom-in"
+                data-aos-offset="110"
+              >
+                que nos definen
               </h1>
             </div>
           </Col>

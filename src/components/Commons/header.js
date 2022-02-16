@@ -59,7 +59,7 @@ export const Header = () => {
               </div>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <a className="nav-link" href="/catalogo">
                 Catálogo
               </a>
             </li>

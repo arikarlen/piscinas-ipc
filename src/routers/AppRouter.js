@@ -18,6 +18,7 @@ import PageAccesorios from "../pages/PageAccesorios";
 import Attenuar from "../pages/Attenuar";
 import Soma from "../pages/Soma";
 import FeelDesign from "../pages/FeelDesign";
+import { Catalogo } from "../pages/Catalogo";
 
 export const AppRouter = () => {
   return (
@@ -41,6 +42,7 @@ export const AppRouter = () => {
         <Route exact path="/attenuar" element={<Attenuar />} />
         <Route exact path="/somma" element={<Soma />} />
         <Route exact path="/feel-design" element={<FeelDesign />} />
+        <Route exact path="/catalogo" element={<Catalogo />} />
       </Routes>
     </Router>
   );

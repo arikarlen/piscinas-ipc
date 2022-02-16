@@ -48,6 +48,8 @@
     --color-griega:#86adce;
     --color-attenuar:#b39b8b;
     --color-attenuar-caribe:#eae3dc;
+
+    --color-bg-sostenible:#dcf3ea; 
     /*Transitions*/
     --standar-transition: 0.3s ease-in all;
     --fast-transition: 0.1s ease-in all;
@@ -90,7 +92,7 @@ ul {
 p {
     font-size: 15px;
     color: var(--color-grey);
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif!important;
     margin-top: 20px;
 }
 
@@ -500,10 +502,6 @@ img.iconCinta {
     top: 10%;
     text-align: left;
     
-}
-
-.carousel-caption p {
-    color:var(--color-white-full)!important;
 }
 
 
@@ -1143,6 +1141,34 @@ div#portada {
 #cardLineas {
     margin-top: 50px;
     margin-bottom: 100px;
+}
+
+#contentCatalogo {
+    padding-top: 150px;
+}
+
+#contentCatalogo h1 {
+    margin-top: 50px;
+}
+
+div#toolbar_documentViewer {
+    background-color: aqua!important;
+}
+
+
+#valoresEmpresa {
+    background-color: var(--color-white);
+    margin-top: 150px;
+}
+
+#Desarrollo {
+    background-color: var(--color-bg-sostenible);
+    padding-top: 50px;
+    padding-bottom:50px ;
+}
+
+.iconoDesarrollo {
+    margin-bottom: 50px;
 }
 
 @media (min-width: 1024px) and (max-width:1200px) {

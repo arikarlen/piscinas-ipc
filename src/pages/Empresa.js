@@ -1,9 +1,11 @@
 import React, { Fragment } from "react";
 import Header from "../components/Commons/header";
 import BackImage from "../components/Empresa/backImage";
+import Desarrollo from "../components/Empresa/desarrollo";
 import Expansion from "../components/Empresa/expansion";
 import Pilares from "../components/Empresa/pilares";
 import SliderNumerosNew from "../components/Empresa/slideNumerosNew";
+import Valores from "../components/Empresa/Valores";
 
 export const Empresa = () => {
   return (
@@ -12,8 +14,9 @@ export const Empresa = () => {
       <BackImage />
       <Pilares />
       <Expansion />
-      {/* <SliderNumeros /> */}
       <SliderNumerosNew />
+      <Valores />
+      <Desarrollo />
     </Fragment>
   );
 };
