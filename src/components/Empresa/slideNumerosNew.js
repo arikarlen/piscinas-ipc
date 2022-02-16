@@ -19,7 +19,7 @@ export const SliderNumerosNew = () => {
       <Carousel fade>
         {loadedData ? (
           slidesNumeros.map((slideNumero, i) => (
-            <Carousel.Item>
+            <Carousel.Item key={slideNumero.id}>
               {BackNumberSlide ? (
                 <img
                   className="d-block w-100"

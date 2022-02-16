@@ -75,7 +75,7 @@ export const SlideComponents = () => {
 
                     <div className="carousel-caption d-none d-md-block">
                       <h2>{slide.Titulo}</h2>
-                      <p>{slide.Descripcion}</p>
+                      <p className="text-white">{slide.Descripcion}</p>
                     </div>
                   </div>
                 ))
