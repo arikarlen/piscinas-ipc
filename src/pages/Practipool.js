@@ -5,6 +5,7 @@ import Header from "../components/Commons/header";
 import Card from "../components/Commons/Cards";
 import CatalogoMomentos from "../components/Commons/catalogoMomentos";
 import NuestrasPiscinas from "../components/Commons/nuestrasPiscinas";
+import Loader from "../components/Commons/Loader";
 
 export const Practipool = () => {
   const [practipool, setpractipool] = useState([]);
@@ -34,7 +35,7 @@ export const Practipool = () => {
                   data-aos-offset="300"
                 ></img>
               ) : (
-                <p>Cargando imagen</p>
+                <Loader />
               )}
             </Col>
             <Col lg={1}></Col>

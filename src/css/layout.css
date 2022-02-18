@@ -152,7 +152,9 @@ ul {
     color:var(--color-white-full)
 }
 
-
+.loader {
+    width: 30px!important;
+}
 
 /**********Buttons*/
 .btn-primary {
@@ -718,10 +720,10 @@ div#titlePools .row {
     float: right;
 }
 
-.carousel-caption h1.text-white {
+/* .carousel-caption h1.text-white {
     position: absolute;
     bottom: 70px;
-}
+} */
 
 #piscinas .carousel-item {
     max-height: 650px;
@@ -960,6 +962,10 @@ ul.listPileta {
     display: none;
 }
 
+#carrouselEmpresa h1, #carrouselEmpresa p {
+    text-align: right!important;
+}
+
 /*****************Practipool*/
 
 #bannerPractipool {
@@ -1170,6 +1176,12 @@ div#toolbar_documentViewer {
 .iconoDesarrollo {
     margin-bottom: 50px;
 }
+
+div#slideEmpresa {
+    padding: 0;
+}
+
+/*Carrusel Empresa*/
 
 @media (min-width: 1024px) and (max-width:1200px) {
     .section-numbers .carousel-caption {

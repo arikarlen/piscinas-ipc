@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import axios from "axios";
 import MarkdownView from "react-showdown";
+import Loader from "../Commons/Loader";
 
 export const Valores = () => {
   const [valores, setValores] = useState([]);
@@ -53,12 +54,12 @@ export const Valores = () => {
                       alt={valorImg.alternativeText}
                     ></img>
                   ) : (
-                    <p>Cargando imagen</p>
+                    <Loader />
                   )}
                 </div>
               ))
             ) : (
-              <p>Cargando...</p>
+              <Loader />
             )}
           </Col>
           <Col lg={6}>

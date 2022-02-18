@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import axios from "axios";
+import Loader from "../Commons/Loader";
 
 export const SlideComponents = () => {
   const [slides, setslides] = useState([]);
@@ -70,7 +71,7 @@ export const SlideComponents = () => {
                         alt="First slide"
                       />
                     ) : (
-                      <p>Cargando imagen</p>
+                      <Loader />
                     )}
 
                     <div className="carousel-caption d-none d-md-block">
@@ -80,7 +81,7 @@ export const SlideComponents = () => {
                   </div>
                 ))
               ) : (
-                <p>Cargando...</p>
+                <Loader />
               )}
             </div>
             <button

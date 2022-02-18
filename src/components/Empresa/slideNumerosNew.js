@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Carousel, Container, Col, Row } from "react-bootstrap";
 import BackNumberSlide from "../../assets/fondo-numeros.jpg";
 import axios from "axios";
+import Loader from "../Commons/Loader";
 
 export const SliderNumerosNew = () => {
   const [slidesNumeros, setslidesNumeros] = useState([]);
@@ -27,7 +28,7 @@ export const SliderNumerosNew = () => {
                   alt="First slide"
                 />
               ) : (
-                <p>Cargando imagen</p>
+                <Loader />
               )}
 
               <Carousel.Caption className="contenido-slider">
@@ -47,7 +48,7 @@ export const SliderNumerosNew = () => {
             </Carousel.Item>
           ))
         ) : (
-          <p>Cargando...</p>
+          <Loader />
         )}
       </Carousel>
     </Container>
