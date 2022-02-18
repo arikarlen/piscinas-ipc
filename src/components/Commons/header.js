@@ -4,6 +4,7 @@ import axios from "axios";
 
 import Accesorios from "./Header/accesorios";
 import Piscinas from "./Header/piscinas";
+import Loader from "./Loader";
 
 export const Header = () => {
   const [logo, setLogo] = useState([]);
@@ -29,7 +30,7 @@ export const Header = () => {
               alt={logo.alternativeText}
             />
           ) : (
-            <p>Cargando imagen</p>
+            <Loader />
           )}
         </a>
         <button

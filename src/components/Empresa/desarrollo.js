@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Carousel } from "react-bootstrap";
 import axios from "axios";
 import MarkdownView from "react-showdown";
+import Loader from "../Commons/Loader";
 
 export const Desarrollo = () => {
   const [desarrollo, setDesarrollo] = useState([]);
@@ -17,7 +18,6 @@ export const Desarrollo = () => {
       setLoadedData(true);
     });
   }, []);
-  console.log(icono.url);
   return (
     <Container id="Desarrollo">
       <Row>
@@ -31,7 +31,7 @@ export const Desarrollo = () => {
                   alt="First slide"
                 />
               ) : (
-                <p>Cargando imagen</p>
+                <Loader />
               )}
             </Col>
           </Row>
@@ -41,15 +41,20 @@ export const Desarrollo = () => {
             <span>{desarrollo.Bajada}</span>
           </p>
           <MarkdownView markdown={desarrollo.Texto} />
-          {loadedData ? (
-            slider.map((imagen, i) => (
-              <div className="hover-section" key={imagen.id}>
-                <h3 className="title-pilares">{imagen.url}</h3>
-              </div>
-            ))
-          ) : (
-            <p>Cargando...</p>
-          )}
+          <Carousel>
+            {loadedData ? (
+              slider.map((imagen, i) => (
+                <Carousel.Item key={imagen.id}>
+                  <img
+                    src={process.env.REACT_APP_URL_API + imagen.url}
+                    alt="sdfsdf"
+                  ></img>
+                </Carousel.Item>
+              ))
+            ) : (
+              <Loader />
+            )}
+          </Carousel>
         </Col>
       </Row>
     </Container>
