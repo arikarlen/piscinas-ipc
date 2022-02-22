@@ -32,4 +32,45 @@
         margin-top:10px;
     }
   }
+  @media (max-width: 1024px) {
+    li.nav-item {
+      margin: 0 17px 0 0 !important;
+  }
+  #contentPiscinas .col-lg-4 {
+    margin-bottom: 79px;
+}
+  }
   /* ============ mobile view .end// ============ */
+
+  #modelos {
+    text-align: center !important;
+  }
+
+  #modelos h3 {
+    line-height: 0;
+    text-align: center;
+  }
+
+  #modelos .btn-secondary {
+    color: #fff;
+}
+#modelos .cardsIpc {
+  margin-bottom: 30px;
+}
+#modelos .cardsIpc:hover {
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.5) !important;
+  transition: var(--AlturaModulos), var(--CambiarcolorBackground), var(--BoxShadows);
+  background-color: var(--color-hover-main) !important;
+}
+.btn-presupuestar .nav-link {
+  display: flex;
+}
+button.navbar-toggler {
+  background-color: var(--color-secondary);
+}
+li.nav-item {
+  width: fit-content;
+}
+#catalogoMomentos .cardsIpc {
+  padding: 0px !important;
+}
