@@ -518,13 +518,13 @@ div#catalogoMomentos {
     padding-top: 4em;
 }
 
-div#catalogoMomentos .cardsIpc {
+/* div#catalogoMomentos .cardsIpc {
     padding: 0!important;
     min-height: 290px!important;
-}
+} */
 
 .catalogoMomentosTexts.col-lg-6 {
-    padding: 20px 0 20px 40px;
+    padding: 20px 20px 32px 40px;
 }
 
 .imgCatalogo {
@@ -688,17 +688,17 @@ img.potenciado {
 #modelos {
     margin-top: 150px;
 }
-
+@media (min-width: 1024px) {
 #modelos .col-lg-2 {
     width: 20%;
 }
-
+}
 #modelos h3 {
     margin:50px auto
 }
 
 #modelos img {
-    width: 60%;
+    width: 60% !important;
     margin-top: 20px;
 }
 

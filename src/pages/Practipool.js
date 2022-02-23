@@ -26,7 +26,7 @@ export const Practipool = () => {
       <Container fluid id="bannerPractipool">
         <Container>
           <Row>
-            <Col lg={3}>
+            <Col lg={3} md={3}>
               {practipoolLogo.url ? (
                 <img
                   src={process.env.REACT_APP_URL_API + practipoolLogo.url}
@@ -38,8 +38,8 @@ export const Practipool = () => {
                 <Loader />
               )}
             </Col>
-            <Col lg={1}></Col>
-            <Col lg={4}>
+            <Col lg={1} md={1}></Col>
+            <Col lg={6} md={8}>
               <p
                 className="text-white"
                 data-aos="zoom-in"
@@ -51,7 +51,7 @@ export const Practipool = () => {
                 href="#modelos"
                 variant="primary"
                 data-aos="zoom-in"
-                data-aos-offset="300"
+                data-aos-offset="200"
               >
                 Ver modelos
               </Button>
@@ -65,7 +65,7 @@ export const Practipool = () => {
             Las piscinas más elegidas del mercado.
           </p>
           <Row>
-            <Col lg={2} data-aos="zoom-in" data-aos-offset="300">
+            <Col lg={2} md={4} data-aos="zoom-in" data-aos-offset="300">
               <a href="/practipool/fun">
                 <Card>
                   {practipoolLogo.url ? (
@@ -83,7 +83,7 @@ export const Practipool = () => {
                 </Card>
               </a>
             </Col>
-            <Col lg={2} data-aos="zoom-in" data-aos-offset="350">
+            <Col lg={2} md={4} data-aos="zoom-in" data-aos-offset="302">
               <a href="/practipool/jump">
                 <Card>
                   {practipoolLogo.url ? (
@@ -101,7 +101,7 @@ export const Practipool = () => {
                 </Card>
               </a>
             </Col>
-            <Col lg={2} data-aos="zoom-in" data-aos-offset="400">
+            <Col lg={2} md={4} data-aos="zoom-in" data-aos-offset="304">
               <a href="/trabaja-con-nosotros">
                 <Card>
                   {practipoolLogo.url ? (
@@ -119,7 +119,7 @@ export const Practipool = () => {
                 </Card>
               </a>
             </Col>
-            <Col lg={2} data-aos="zoom-in" data-aos-offset="450">
+            <Col lg={2} md={4} data-aos="zoom-in" data-aos-offset="306">
               <a href="/trabaja-con-nosotros">
                 <Card>
                   {practipoolLogo.url ? (
@@ -137,7 +137,7 @@ export const Practipool = () => {
                 </Card>
               </a>
             </Col>
-            <Col lg={2} data-aos="zoom-in" data-aos-offset="500">
+            <Col lg={2} md={4} data-aos="zoom-in" data-aos-offset="308">
               <a href="/trabaja-con-nosotros">
                 <Card>
                   {practipoolLogo.url ? (
