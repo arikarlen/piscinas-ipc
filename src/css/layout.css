@@ -1189,3 +1189,65 @@ div#slideEmpresa {
         left: 13%;
     }
 }
+ol.breadcrumb {
+    padding: 50px 0;
+}
+
+/*Forms*/
+
+#formJobs .position-absolute {
+    position: fixed!important;
+    z-index: 99;
+}
+
+#formJobs input {
+    width: 100%;
+    border: 1px solid #949494;
+    border-radius: 8px;
+    margin: 2em auto;
+    padding: 13px 15px;
+}
+
+#formJobs select {
+    border: 1px solid #949494;
+    border-radius: 8px;
+    padding: 13px 15px;
+}
+
+#backFiles {
+    margin-bottom: 2em;
+    
+    padding: 100px 0;
+}
+
+.file {
+    background-color: #F3F3F5;
+}
+.contentDropzoneOk .dzu-dropzone {
+    border-color: rgb(43, 136, 0);
+    
+}
+
+.fileOk {
+    background-color: rgb(215 243 202)!important;
+}
+
+.dzu-dropzone {
+    background-color: #fff;
+    overflow: hidden;
+    border: 1px solid #949494;
+    border-radius: 8px;
+}
+
+.contentDropzone .dzu-dropzone {
+    border-color: #d9d9d9;
+}
+.toast {
+    background-color: #83c938;
+}
+.toast-header {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    color: #fff;
+}
