@@ -13,7 +13,7 @@ import Dropzone from "react-dropzone-uploader";
 import axios from "axios";
 import ToastMessage from "./ToastMessage";
 
-const FormTrabaja = (props) => {
+const FormFormaParte = (props) => {
   /*Toast*/
   const [showAccepted, setShowAccepted] = useState(false);
   const toggleShowAccepted = () => setShowAccepted(!showAccepted);
@@ -24,7 +24,7 @@ const FormTrabaja = (props) => {
   /*ToastEnd*/
 
   const [values, setValues] = useState({
-    origin: "Trabaja con nosotros",
+    origin: "Forma parte de nuestra red",
 
     nombre: "",
     telefono: "",
@@ -32,6 +32,9 @@ const FormTrabaja = (props) => {
     provincia: "",
     localidad: "",
     cv: "",
+    infraestructura: "",
+    provinciaInteres: "",
+    localidadInteres: "",
     comentarios: "",
   });
 
@@ -43,6 +46,9 @@ const FormTrabaja = (props) => {
     localidad,
     cv,
     origin,
+    infraestructura,
+    provinciaInteres,
+    localidadInteres,
     comentarios,
   } = values;
   const [disabled, setDisabled] = useState(true);
@@ -75,14 +81,17 @@ const FormTrabaja = (props) => {
             "Gracias por su interes en ser parte de IPC. A la brevedad nos estaremos contactactando con usted"
           );
           setValues({
-            origin: "Trabaja con nosotros",
-
+            origin: "Forma parte de nuestra red",
             nombre: "",
             email: "",
             provincia: "",
             telefono: "",
             localidad: "",
             cv: "",
+            position: "",
+            infraestructura: "",
+            provinciaInteres: "",
+            localidadInteres: "",
             comentarios: "",
           });
         },
@@ -144,13 +153,6 @@ const FormTrabaja = (props) => {
   };
 
   const handleChangeStatus = async ({ meta, file }, status) => {
-    // console.log(status, meta);
-    /*setValues({
-      ...values,
-      cv: file,
-    });*/
-    // console.log(status);
-
     if (status === "done") {
       const base64 = await convertBase64(file);
       values["cv"] = base64;
@@ -170,7 +172,7 @@ const FormTrabaja = (props) => {
 
   return (
     <Fragment>
-      <h1 className="text-center">Trabajá con nosotros</h1>
+      <h1 className="text-center">Forma parte de nuestra red</h1>
 
       <Form onSubmit={handleSubmit} id="formJobs">
         <ToastContainer className="p-3" position={position}>
@@ -186,7 +188,7 @@ const FormTrabaja = (props) => {
                 className="rounded me-2"
                 alt=""
               />
-              <ToastMessage mensaje="Su CV se cargó con exito" />
+              <ToastMessage mensaje="El documento se cargo con exito" />
             </Toast.Header>
           </Toast>
           <Toast
@@ -312,7 +314,8 @@ const FormTrabaja = (props) => {
                   <Dropzone
                     getUploadParams={getUploadParams}
                     onChangeStatus={handleChangeStatus}
-                    inputContent="Adjunta tu Curriculum Vitae"
+                    inputContent="Modelo de
+                    negocio propuesto"
                     maxFiles={1}
                     accept=".pdf"
                     id="cv"
@@ -328,6 +331,70 @@ const FormTrabaja = (props) => {
         <Container>
           <Row>
             <Col md={{ span: 6, offset: 3 }}>
+              <Form.Group as={Col} className="input-getIn">
+                <Form.Control
+                  as="textarea"
+                  rows={10}
+                  id="infraestructura"
+                  name="infraestructura"
+                  value={infraestructura}
+                  onChange={handleInputChange}
+                  placeholder="Infraestructura disponible"
+                ></Form.Control>
+              </Form.Group>
+              <Form.Group as={Col} className="input-getIn">
+                <Form.Select
+                  aria-label="Default select example"
+                  id="provinciaInteres"
+                  name="provinciaInteres"
+                  value={provinciaInteres}
+                  onChange={handleInputChange}
+                >
+                  <option>Provincia de interes</option>
+                  <option value="Buenos Aires">Buenos Aires</option>
+                  <option value="Ciudad Autónoma de Buenos Aires">
+                    Ciudad Autónoma de Buenos Aires
+                  </option>
+                  <option value="Catamarca">Catamarca</option>
+                  <option value="Chaco">Chaco</option>
+                  <option value="Catamarca">Catamarca</option>
+                  <option value="Chubut">Chubut</option>
+                  <option value="Córdoba">Córdoba</option>
+                  <option value="Corrientes">Corrientes</option>
+                  <option value="Entre Ríos">Entre Ríos</option>
+                  <option value="Formosa">Formosa</option>
+                  <option value="Jujuy">Jujuy</option>
+                  <option value="La Pampa">La Pampa</option>
+                  <option value="La Rioja">La Rioja</option>
+                  <option value="Mendoza">Mendoza</option>
+                  <option value="Misiones">Misiones</option>
+                  <option value="Neuquén">Neuquén</option>
+                  <option value="Río Negro">Río Negro</option>
+                  <option value="Salta">Salta</option>
+                  <option value="San Juan">San Juan</option>
+                  <option value="San Luis">San Luis</option>
+                  <option value="Santa Cruz">Santa Cruz</option>
+                  <option value="Santa Fe">Santa Fe</option>
+                  <option value="Santiago del Estero">
+                    Santiago del Estero
+                  </option>
+                  <option value="Tierra del Fuego, Antártida e Islas del Atlántico Sur">
+                    Tierra del Fuego, Antártida e Islas del Atlántico Sur
+                  </option>
+                  <option value="Tucumán">Tucumán</option>
+                </Form.Select>
+              </Form.Group>
+
+              <Form.Group as={Col} className="input-getIn">
+                <Form.Control
+                  type="text"
+                  id="localidadInteres"
+                  name="localidadInteres"
+                  value={localidadInteres}
+                  onChange={handleInputChange}
+                  placeholder="Localidad de interes"
+                ></Form.Control>
+              </Form.Group>
               <Form.Group as={Col} className="input-getIn">
                 <Form.Control
                   as="textarea"
@@ -354,4 +421,4 @@ const FormTrabaja = (props) => {
   );
 };
 
-export default FormTrabaja;
+export default FormFormaParte;

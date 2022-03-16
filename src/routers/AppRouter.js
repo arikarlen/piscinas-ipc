@@ -21,6 +21,9 @@ import FeelDesign from "../pages/FeelDesign";
 import Catalogo from "../pages/Catalogo";
 import TrabajaConNosotros from "../pages/TrabajaConNosotros";
 import PageNotFound from "../components/Commons/404-page";
+import FormaParte from "../pages/FormaParte";
+import Proveedor from "../pages/Proveedor";
+import Contacto from "../pages/Contacto";
 
 export const AppRouter = () => {
   return (
@@ -50,6 +53,9 @@ export const AppRouter = () => {
           path="/trabaja-con-nosotros"
           element={<TrabajaConNosotros />}
         />
+        <Route exact path="/parte-de-nuestra-red" element={<FormaParte />} />
+        <Route exact path="/queres-ser-proveedor" element={<Proveedor />} />
+        <Route exact path="/contacto" element={<Contacto />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Router>

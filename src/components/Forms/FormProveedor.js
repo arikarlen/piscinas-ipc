@@ -13,7 +13,7 @@ import Dropzone from "react-dropzone-uploader";
 import axios from "axios";
 import ToastMessage from "./ToastMessage";
 
-const FormTrabaja = (props) => {
+const FormProveedor = (props) => {
   /*Toast*/
   const [showAccepted, setShowAccepted] = useState(false);
   const toggleShowAccepted = () => setShowAccepted(!showAccepted);
@@ -24,7 +24,7 @@ const FormTrabaja = (props) => {
   /*ToastEnd*/
 
   const [values, setValues] = useState({
-    origin: "Trabaja con nosotros",
+    origin: "Queres ser proveedor",
 
     nombre: "",
     telefono: "",
@@ -166,7 +166,7 @@ const FormTrabaja = (props) => {
     }
   };
 
-  console.log(values);
+  // console.log(values);
 
   return (
     <Fragment>
@@ -186,7 +186,7 @@ const FormTrabaja = (props) => {
                 className="rounded me-2"
                 alt=""
               />
-              <ToastMessage mensaje="Su CV se cargó con exito" />
+              <ToastMessage mensaje="Documento cargado con exito" />
             </Toast.Header>
           </Toast>
           <Toast
@@ -312,7 +312,7 @@ const FormTrabaja = (props) => {
                   <Dropzone
                     getUploadParams={getUploadParams}
                     onChangeStatus={handleChangeStatus}
-                    inputContent="Adjunta tu Curriculum Vitae"
+                    inputContent="Productos/Servicios propuestos"
                     maxFiles={1}
                     accept=".pdf"
                     id="cv"
@@ -354,4 +354,4 @@ const FormTrabaja = (props) => {
   );
 };
 
-export default FormTrabaja;
+export default FormProveedor;

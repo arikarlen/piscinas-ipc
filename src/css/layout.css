@@ -6,7 +6,7 @@
     right: 0;
     top:0;
     padding: 5px 10px;
-    z-index: 99;
+    z-index: 9999;
 }
 
 .dev {
@@ -1200,7 +1200,7 @@ ol.breadcrumb {
     z-index: 99;
 }
 
-#formJobs input {
+#formJobs input, #formJobs textarea  {
     width: 100%;
     border: 1px solid #949494;
     border-radius: 8px;
@@ -1216,8 +1216,7 @@ ol.breadcrumb {
 
 #backFiles {
     margin-bottom: 2em;
-    
-    padding: 100px 0;
+    padding: 100px 0 60px 0;
 }
 
 .file {
@@ -1226,6 +1225,11 @@ ol.breadcrumb {
 .contentDropzoneOk .dzu-dropzone {
     border-color: rgb(43, 136, 0);
     
+}
+
+.dzu-previewContainer {
+   
+    border-bottom: none;
 }
 
 .fileOk {
@@ -1250,4 +1254,7 @@ ol.breadcrumb {
     text-align: center;
     background-color: transparent;
     color: #fff;
+}
+.fileError {
+    background-color: #ac0202;
 }
