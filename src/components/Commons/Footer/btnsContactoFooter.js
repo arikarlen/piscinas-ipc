@@ -49,7 +49,7 @@ export const BtnsContactoFooter = () => {
             </a>
           </Col>
           <Col lg={3} data-aos="zoom-in" data-aos-offset="600">
-            <a href="/contactanos">
+            <a href="/contacto">
               <Card>
                 <img src={imgContacto} alt="Contactanos"></img>
                 <h3>Contactanos</h3>
