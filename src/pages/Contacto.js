@@ -1,7 +1,8 @@
 import React, { Fragment } from "react";
 import { Container } from "react-bootstrap";
 import Header from "../components/Commons/header";
-import Gmaps from "../components/Contacto/Gmaps";
+// import Gmaps from "../components/Contacto/Gmaps";
+import GmapsFull from "../components/Contacto/GmapsFull";
 
 export const Contacto = () => {
   return (
@@ -10,7 +11,8 @@ export const Contacto = () => {
         <Header />
       </div>
       <Container fluid id="contentInterns" className="spa">
-        <Gmaps />
+        {/* <Gmaps /> */}
+        <GmapsFull />
       </Container>
     </Fragment>
   );

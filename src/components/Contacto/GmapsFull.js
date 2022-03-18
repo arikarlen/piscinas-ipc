@@ -5,7 +5,7 @@ import marker from "../../assets/marker.svg";
 
 const Concesionario = ({ text }) => <img src={marker}></img>;
 
-export const Gmaps = () => {
+export const GmapsFull = () => {
   const defaultProps = {
     center: {
       lat: -32.98,
@@ -31,4 +31,4 @@ export const Gmaps = () => {
   );
 };
 
-export default Gmaps;
+export default GmapsFull;
