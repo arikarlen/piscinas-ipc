@@ -11,6 +11,7 @@ import {
 import axios from "axios";
 import Header from "../../components/Commons/header";
 import NuestrasPiscinas from "../../components/Commons/nuestrasPiscinas";
+import Loader from "../../components/Commons/Loader";
 
 export const Fun = () => {
   const [key, setKey] = useState("home");
@@ -55,7 +56,7 @@ export const Fun = () => {
                   alt={logoPool.alternativeText}
                 ></img>
               ) : (
-                <p>Cargando imagen</p>
+                <Loader />
               )}
             </Col>
           </Row>
@@ -75,7 +76,7 @@ export const Fun = () => {
               </Carousel.Item>
             ))
           ) : (
-            <p>Cargando...</p>
+            <Loader />
           )}
         </Carousel>
         <Container id="caracteristicas">
@@ -90,7 +91,7 @@ export const Fun = () => {
                 </li>
               ))
             ) : (
-              <p>Cargando...</p>
+              <Loader />
             )}
           </ul>
         </Container>
@@ -110,7 +111,7 @@ export const Fun = () => {
                   </Col>
                 ))
               ) : (
-                <p>Cargando...</p>
+                <Loader />
               )}
             </Row>
             <Row>
@@ -126,12 +127,12 @@ export const Fun = () => {
                         className="img-fluid"
                       ></img>
                     ) : (
-                      <p>Cargando imagen</p>
+                      <Loader />
                     )}
                   </Col>
                 ))
               ) : (
-                <p>Cargando...</p>
+                <Loader />
               )}
             </Row>
             <Row className="casco">
@@ -143,7 +144,7 @@ export const Fun = () => {
                   </Col>
                 ))
               ) : (
-                <p>Cargando...</p>
+                <Loader />
               )}
             </Row>
             <Row className="profundidad">
@@ -155,7 +156,7 @@ export const Fun = () => {
                   </Col>
                 ))
               ) : (
-                <p>Cargando...</p>
+                <Loader />
               )}
             </Row>
             <Row className="volumen">
@@ -167,7 +168,7 @@ export const Fun = () => {
                   </Col>
                 ))
               ) : (
-                <p>Cargando...</p>
+                <Loader />
               )}
             </Row>
             <Row className="piscina">
@@ -179,7 +180,7 @@ export const Fun = () => {
                   </Col>
                 ))
               ) : (
-                <p>Cargando...</p>
+                <Loader />
               )}
             </Row>
           </Container>
@@ -209,7 +210,7 @@ export const Fun = () => {
                             className="img-fluid"
                           ></img>
                         ) : (
-                          <p>Cargando imagen</p>
+                          <Loader />
                         )}
                       </Col>
                       <Col lg={8}>
@@ -219,7 +220,7 @@ export const Fun = () => {
                     </Row>
                   ))
                 ) : (
-                  <p>Cargando...</p>
+                  <Loader />
                 )}
               </Tab>
               <Tab eventKey="opcionales" title="Opcionales">
@@ -239,14 +240,14 @@ export const Fun = () => {
                             className="imagenOpcional center-block"
                           ></img>
                         ) : (
-                          <p>Cargando imagen</p>
+                          <Loader />
                         )}
                         <h4>{opcional.Nombre}</h4>
                         <p>{opcional.Descripcion}</p>
                       </Col>
                     ))
                   ) : (
-                    <p>Cargando...</p>
+                    <Loader />
                   )}
                 </Row>
               </Tab>

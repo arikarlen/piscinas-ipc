@@ -4,6 +4,7 @@ import axios from "axios";
 
 import Accesorios from "./Header/accesorios";
 import Piscinas from "./Header/piscinas";
+import Loader from "./Loader";
 
 export const Header = () => {
   const [logo, setLogo] = useState([]);
@@ -29,7 +30,7 @@ export const Header = () => {
               alt={logo.alternativeText}
             />
           ) : (
-            <p>Cargando imagen</p>
+            <Loader />
           )}
         </a>
         <button
@@ -59,7 +60,7 @@ export const Header = () => {
               </div>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <a className="nav-link" href="/catalogo">
                 Catálogo
               </a>
             </li>
@@ -74,7 +75,7 @@ export const Header = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <a className="nav-link" href="/contacto">
                 Contacto
               </a>
             </li>

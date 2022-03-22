@@ -6,7 +6,7 @@
     right: 0;
     top:0;
     padding: 5px 10px;
-    z-index: 99;
+    z-index: 9999;
 }
 
 .dev {
@@ -48,6 +48,8 @@
     --color-griega:#86adce;
     --color-attenuar:#b39b8b;
     --color-attenuar-caribe:#eae3dc;
+
+    --color-bg-sostenible:#dcf3ea; 
     /*Transitions*/
     --standar-transition: 0.3s ease-in all;
     --fast-transition: 0.1s ease-in all;
@@ -90,7 +92,7 @@ ul {
 p {
     font-size: 15px;
     color: var(--color-grey);
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif!important;
     margin-top: 20px;
 }
 
@@ -150,7 +152,9 @@ ul {
     color:var(--color-white-full)
 }
 
-
+.loader {
+    width: 30px!important;
+}
 
 /**********Buttons*/
 .btn-primary {
@@ -502,10 +506,6 @@ img.iconCinta {
     
 }
 
-.carousel-caption p {
-    color:var(--color-white-full)!important;
-}
-
 
 /*****Planta e Produccion*/
 
@@ -518,13 +518,13 @@ div#catalogoMomentos {
     padding-top: 4em;
 }
 
-div#catalogoMomentos .cardsIpc {
+/* div#catalogoMomentos .cardsIpc {
     padding: 0!important;
     min-height: 290px!important;
-}
+} */
 
 .catalogoMomentosTexts.col-lg-6 {
-    padding: 20px 0 20px 40px;
+    padding: 20px 20px 32px 40px;
 }
 
 .imgCatalogo {
@@ -688,17 +688,17 @@ img.potenciado {
 #modelos {
     margin-top: 150px;
 }
-
+@media (min-width: 1024px) {
 #modelos .col-lg-2 {
     width: 20%;
 }
-
+}
 #modelos h3 {
     margin:50px auto
 }
 
 #modelos img {
-    width: 60%;
+    width: 60% !important;
     margin-top: 20px;
 }
 
@@ -720,10 +720,10 @@ div#titlePools .row {
     float: right;
 }
 
-.carousel-caption h1.text-white {
+/* .carousel-caption h1.text-white {
     position: absolute;
     bottom: 70px;
-}
+} */
 
 #piscinas .carousel-item {
     max-height: 650px;
@@ -962,6 +962,10 @@ ul.listPileta {
     display: none;
 }
 
+#carrouselEmpresa h1, #carrouselEmpresa p {
+    text-align: right!important;
+}
+
 /*****************Practipool*/
 
 #bannerPractipool {
@@ -1145,9 +1149,112 @@ div#portada {
     margin-bottom: 100px;
 }
 
+#contentCatalogo {
+    padding-top: 150px;
+}
+
+#contentCatalogo h1 {
+    margin-top: 50px;
+}
+
+div#toolbar_documentViewer {
+    background-color: aqua!important;
+}
+
+
+#valoresEmpresa {
+    background-color: var(--color-white);
+    margin-top: 150px;
+}
+
+#Desarrollo {
+    background-color: var(--color-bg-sostenible);
+    padding-top: 50px;
+    padding-bottom:50px ;
+}
+
+.iconoDesarrollo {
+    margin-bottom: 50px;
+}
+
+div#slideEmpresa {
+    padding: 0;
+}
+
+/*Carrusel Empresa*/
+
 @media (min-width: 1024px) and (max-width:1200px) {
     .section-numbers .carousel-caption {
         right: 10%;
         left: 13%;
     }
+}
+ol.breadcrumb {
+    padding: 50px 0;
+}
+
+/*Forms*/
+
+#formJobs .position-absolute {
+    position: fixed!important;
+    z-index: 99;
+}
+
+#formJobs input, #formJobs textarea  {
+    width: 100%;
+    border: 1px solid #949494;
+    border-radius: 8px;
+    margin: 2em auto;
+    padding: 13px 15px;
+}
+
+#formJobs select {
+    border: 1px solid #949494;
+    border-radius: 8px;
+    padding: 13px 15px;
+}
+
+#backFiles {
+    margin-bottom: 2em;
+    padding: 100px 0 60px 0;
+}
+
+.file {
+    background-color: #F3F3F5;
+}
+.contentDropzoneOk .dzu-dropzone {
+    border-color: rgb(43, 136, 0);
+    
+}
+
+.dzu-previewContainer {
+   
+    border-bottom: none;
+}
+
+.fileOk {
+    background-color: rgb(215 243 202)!important;
+}
+
+.dzu-dropzone {
+    background-color: #fff;
+    overflow: hidden;
+    border: 1px solid #949494;
+    border-radius: 8px;
+}
+
+.contentDropzone .dzu-dropzone {
+    border-color: #d9d9d9;
+}
+.toast {
+    background-color: #83c938;
+}
+.toast-header {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    color: #fff;
+}
+.fileError {
+    background-color: #ac0202;
 }

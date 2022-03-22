@@ -13,6 +13,12 @@ export const FeelDesign = () => {
   const [imagenCaracteristicaUno, setimagenCaracteristicaUno] = useState([]);
   const [imagenCaracteristicaDos, setimagenCaracteristicaDos] = useState([]);
   const [imagenCaracteristicaTres, setimagenCaracteristicaTres] = useState([]);
+  const [imagenCaracteristicaCuatro, setimagenCaracteristicaCuatro] = useState(
+    []
+  );
+  const [imagenCaracteristicaCinco, setimagenCaracteristicaCinco] = useState(
+    []
+  );
 
   useEffect(() => {
     axios
@@ -24,6 +30,8 @@ export const FeelDesign = () => {
         setimagenCaracteristicaUno(res.data.Imagen_Caracteristica_1);
         setimagenCaracteristicaDos(res.data.Imagen_Caracteristica_2);
         setimagenCaracteristicaTres(res.data.Imagen_Caracteristica_3);
+        setimagenCaracteristicaCuatro(res.data.Imagen_Caracteristica_4);
+        setimagenCaracteristicaCinco(res.data.Imagen_Caracteristica_5);
       });
   }, []);
 
@@ -117,7 +125,7 @@ export const FeelDesign = () => {
           </Col>
         </Row>
       </Container>
-      {/* <Container>
+      <Container>
         <Row className="contentCaractesticasLuxury arenaCaribe">
           <Col lg={6}>
             {imagenCaracteristicaTres.url ? (
@@ -138,7 +146,51 @@ export const FeelDesign = () => {
             <p>{accesorios.Descripcion_Caracteristica_3}</p>
           </Col>
         </Row>
-      </Container> */}
+      </Container>
+      <Container>
+        <Row className="contentCaractesticasLuxury">
+          <Col lg={6}>
+            <h2>{accesorios.Titulo_Caracteristica_4}</h2>
+            <p>{accesorios.Descripcion_Caracteristica_4}</p>
+          </Col>
+          <Col lg={6}>
+            {imagenCaracteristicaCuatro.url ? (
+              <img
+                src={
+                  process.env.REACT_APP_URL_API + imagenCaracteristicaCuatro.url
+                }
+                alt={imagenCaracteristicaCuatro.alternativeText}
+                data-aos="zoom-in"
+                data-aos-offset="300"
+              ></img>
+            ) : (
+              <p>Cargando imagen</p>
+            )}
+          </Col>
+        </Row>
+      </Container>
+      <Container>
+        <Row className="contentCaractesticasLuxury arenaCaribe">
+          <Col lg={6}>
+            {imagenCaracteristicaCinco.url ? (
+              <img
+                src={
+                  process.env.REACT_APP_URL_API + imagenCaracteristicaCinco.url
+                }
+                alt={imagenCaracteristicaCinco.alternativeText}
+                data-aos="zoom-in"
+                data-aos-offset="300"
+              ></img>
+            ) : (
+              <p>Cargando imagen</p>
+            )}
+          </Col>
+          <Col lg={6}>
+            <h2>{accesorios.Titulo_Caracteristica_5}</h2>
+            <p>{accesorios.Descripcion_Caracteristica_5}</p>
+          </Col>
+        </Row>
+      </Container>
 
       <NuestrasPiscinas />
       <CatalogoMomentos />
