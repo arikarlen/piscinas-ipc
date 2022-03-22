@@ -6,10 +6,10 @@ export const CatalogoMomentos = () => {
     <Container fluid id="catalogoMomentos" className="backsHome">
       <Container>
         <Row>
-          <Col lg={6} data-aos="zoom-in" data-aos-offset="100">
+          <Col className="mb-5" lg={6} md={12} data-aos="zoom-in" data-aos-offset="100">
             <div className=" cardsIpc ">
               <Row>
-                <Col lg={6} className="catalogoMomentosTexts">
+                <Col lg={6} md={6} className="catalogoMomentosTexts">
                   <h3>Catálogo</h3>
                   <p>
                     Podés ver y descargar nuestro catálogo 2020 con todos los
@@ -19,14 +19,14 @@ export const CatalogoMomentos = () => {
                     Sobre la empresa
                   </Button>
                 </Col>
-                <Col lg={6} className="imgCatalogo"></Col>
+                <Col lg={6} md={6} className="imgCatalogo"></Col>
               </Row>
             </div>
           </Col>
-          <Col lg={6} data-aos="zoom-in" data-aos-offset="300">
+          <Col lg={6} md={12} data-aos="zoom-in" data-aos-offset="300">
             <div className=" cardsIpc ">
               <Row>
-                <Col lg={6} className="catalogoMomentosTexts">
+                <Col lg={6} md={6} className="catalogoMomentosTexts">
                   <h3>Momentos IPC</h3>
                   <p>
                     Todos los detalles de nuestras piscinas están pensados para
@@ -36,7 +36,7 @@ export const CatalogoMomentos = () => {
                     Sobre la empresa
                   </Button>
                 </Col>
-                <Col lg={6} className="imgMomentos"></Col>
+                <Col lg={6} md={6} className="imgMomentos"></Col>
               </Row>
             </div>
           </Col>
