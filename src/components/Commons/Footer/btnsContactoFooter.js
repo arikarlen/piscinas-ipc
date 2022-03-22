@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import Card from "../Cards";
 import imgTrabaja from "../../../assets/trabaja-icon.svg";
 import imgRed from "../../../assets/pileta-icon.svg";
 import imgProveedor from "../../../assets/prov-icon.svg";
@@ -12,7 +13,7 @@ export const BtnsContactoFooter = () => {
         <Row>
           <Col lg={3} data-aos="zoom-in">
             <a href="/trabaja-con-nosotros">
-              <div className=" cardsIpc ">
+              <Card>
                 <img src={imgTrabaja} alt="Trabaja con nosotros"></img>
                 <h3>
                   Trabajá con <br></br>nosotros
@@ -20,42 +21,42 @@ export const BtnsContactoFooter = () => {
                 <Button variant="secondary">
                   Más info<i className="fas fa-chevron-right"></i>
                 </Button>
-              </div>
+              </Card>
             </a>
           </Col>
           <Col lg={3} data-aos="zoom-in" data-aos-offset="200">
             <a href="/parte-de-nuestra-red">
-              <div className=" cardsIpc ">
+              <Card>
                 <img src={imgRed} alt="Forma parte de nuestra red"></img>
 
                 <h3>Formá parte de nuestra red</h3>
                 <Button variant="secondary">
                   Más info<i className="fas fa-chevron-right"></i>
                 </Button>
-              </div>
+              </Card>
             </a>
           </Col>
           <Col lg={3} data-aos="zoom-in" data-aos-offset="400">
             <a href="/queres-ser-proveedor/">
-              <div className=" cardsIpc ">
+              <Card>
                 <img src={imgProveedor} alt="¿Queres ser proveedor?"></img>
 
                 <h3>¿Querés ser proveedor?</h3>
                 <Button variant="secondary">
                   Más info<i className="fas fa-chevron-right"></i>
                 </Button>
-              </div>
+              </Card>
             </a>
           </Col>
           <Col lg={3} data-aos="zoom-in" data-aos-offset="600">
-            <a href="/contactanos">
-              <div className=" cardsIpc ">
+            <a href="/contacto">
+              <Card>
                 <img src={imgContacto} alt="Contactanos"></img>
                 <h3>Contactanos</h3>
                 <Button variant="secondary">
                   Más info<i className="fas fa-chevron-right"></i>
                 </Button>
-              </div>
+              </Card>
             </a>
           </Col>
         </Row>

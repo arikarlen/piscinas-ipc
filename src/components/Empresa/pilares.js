@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import axios from "axios";
+import Loader from "../Commons/Loader";
 
 export const Pilares = () => {
   const [pilares, setpilares] = useState([]);
@@ -31,13 +32,13 @@ export const Pilares = () => {
                 data-aos-offset="100"
               >
                 Tres pilares
-                <h1
-                  className="title-pilares color-blue"
-                  data-aos="zoom-in"
-                  data-aos-offset="110"
-                >
-                  que nos definen
-                </h1>
+              </h1>
+              <h1
+                className="title-pilares color-blue"
+                data-aos="zoom-in"
+                data-aos-offset="110"
+              >
+                que nos definen
               </h1>
             </div>
           </Col>
@@ -56,7 +57,7 @@ export const Pilares = () => {
                   </div>
                 ))
               ) : (
-                <p>Cargando...</p>
+                <Loader />
               )}
             </div>
           </Col>
@@ -65,7 +66,7 @@ export const Pilares = () => {
       <Container fluid className="backpilares">
         <Row>
           <Col lg={12} className="d-none d-lg-block">
-            {bannerDesktop ? (
+            {bannerMedioDesktop ? (
               <img
                 src={bannerDesktop}
                 data-aos="zoom-in"
@@ -73,11 +74,11 @@ export const Pilares = () => {
                 alt={bannerMedioDesktop.alternativeText}
               ></img>
             ) : (
-              <p>Cargando imagen</p>
+              <Loader />
             )}
           </Col>
           <Col sm={12} className="d-block d-md-none d-lg-none">
-            {bannerMobile ? (
+            {bannerMedioMobile ? (
               <img
                 src={bannerMobile}
                 data-aos="zoom-in"
@@ -85,7 +86,7 @@ export const Pilares = () => {
                 alt={bannerMedioMobile.alternativeText}
               ></img>
             ) : (
-              <p>Cargando imagen</p>
+              <Loader />
             )}
           </Col>
         </Row>

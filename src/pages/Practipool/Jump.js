@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Header from "../../components/Commons/header";
 import {
   Container,
   Row,
@@ -9,6 +10,8 @@ import {
   Breadcrumb,
 } from "react-bootstrap";
 import axios from "axios";
+import NuestrasPiscinas from "../../components/Commons/nuestrasPiscinas";
+import Loader from "../../components/Commons/Loader";
 
 export const Jump = () => {
   const [key, setKey] = useState("home");
@@ -29,6 +32,9 @@ export const Jump = () => {
 
   return (
     <>
+      <div id="headerInternos">
+        <Header />
+      </div>
       <Container fluid id="contentInterns" className="jump">
         <Container id="titlePools">
           <Breadcrumb>
@@ -50,7 +56,7 @@ export const Jump = () => {
                   alt={logoPool.alternativeText}
                 ></img>
               ) : (
-                <p>Cargando imagen</p>
+                <Loader />
               )}
             </Col>
           </Row>
@@ -70,7 +76,7 @@ export const Jump = () => {
               </Carousel.Item>
             ))
           ) : (
-            <p>Cargando...</p>
+            <Loader />
           )}
         </Carousel>
         <Container id="caracteristicas">
@@ -85,7 +91,7 @@ export const Jump = () => {
                 </li>
               ))
             ) : (
-              <p>Cargando...</p>
+              <Loader />
             )}
           </ul>
         </Container>
@@ -102,7 +108,16 @@ export const Jump = () => {
                   <Col className="text-center" lg={6} key={modelo.id}>
                     <p>{pool.Modelo}</p>
                     <h2>{modelo.Nombre}</h2>
-
+                  </Col>
+                ))
+              ) : (
+                <Loader />
+              )}
+            </Row>
+            <Row>
+              {loadedData ? (
+                pool.Modelos.map((modelo, i) => (
+                  <Col className="text-center" lg={6} key={modelo.id}>
                     {modelo.Imagen.url ? (
                       <img
                         src={process.env.REACT_APP_URL_API + modelo.Imagen.url}
@@ -112,12 +127,12 @@ export const Jump = () => {
                         width="250px"
                       ></img>
                     ) : (
-                      <p>Cargando imagen</p>
+                      <Loader />
                     )}
                   </Col>
                 ))
               ) : (
-                <p>Cargando...</p>
+                <Loader />
               )}
             </Row>
             <Row className="casco">
@@ -129,7 +144,7 @@ export const Jump = () => {
                   </Col>
                 ))
               ) : (
-                <p>Cargando...</p>
+                <Loader />
               )}
             </Row>
             <Row className="profundidad">
@@ -141,7 +156,7 @@ export const Jump = () => {
                   </Col>
                 ))
               ) : (
-                <p>Cargando...</p>
+                <Loader />
               )}
             </Row>
             <Row className="volumen">
@@ -153,7 +168,7 @@ export const Jump = () => {
                   </Col>
                 ))
               ) : (
-                <p>Cargando...</p>
+                <Loader />
               )}
             </Row>
             <Row className="piscina">
@@ -165,77 +180,82 @@ export const Jump = () => {
                   </Col>
                 ))
               ) : (
-                <p>Cargando...</p>
+                <Loader />
               )}
             </Row>
           </Container>
         </Container>
-        <Container id="componentes">
-          <Tabs
-            id="controlled-tab-example"
-            activeKey={key}
-            onSelect={(k) => setKey(k)}
-            className="mb-3"
-          >
-            <Tab eventKey="componentes" title="Componentes">
-              {loadedData ? (
-                pool.Componentes.map((componente, i) => (
-                  <Row className="componente" key={componente.id}>
-                    <Col lg={4}>
-                      {componente.Imagen.url ? (
-                        <img
-                          src={
-                            process.env.REACT_APP_URL_API +
-                            componente.Imagen.url
-                          }
-                          data-aos="zoom-in"
-                          data-aos-offset="100"
-                          alt={componente.Imagen.alternativeText}
-                          className="img-fluid"
-                        ></img>
-                      ) : (
-                        <p>Cargando imagen</p>
-                      )}
-                    </Col>
-                    <Col lg={8}>
-                      <h4>{componente.Nombre}</h4>
-                      <p>{componente.Descripcion}</p>
-                    </Col>
-                  </Row>
-                ))
-              ) : (
-                <p>Cargando...</p>
-              )}
-            </Tab>
-            <Tab eventKey="opcionales" title="Opcionales">
-              <Row>
+        <Container fluid id="componentes">
+          <Container>
+            <Tabs
+              id="controlled-tab-example"
+              activeKey={key}
+              transition={true}
+              onSelect={(k) => setKey(k)}
+              className="mb-3"
+            >
+              <Tab eventKey="componentes" title="Componentes">
                 {loadedData ? (
-                  pool.Opcionales.map((opcional, i) => (
-                    <Col lg={3}>
-                      {opcional.Imagen.url ? (
-                        <img
-                          src={
-                            process.env.REACT_APP_URL_API + opcional.Imagen.url
-                          }
-                          data-aos="zoom-in"
-                          data-aos-offset="100"
-                          alt={opcional.Imagen.alternativeText}
-                          className="imagenOpcional center-block"
-                        ></img>
-                      ) : (
-                        <p>Cargando imagen</p>
-                      )}
-                      <h4>{opcional.Nombre}</h4>
-                      <p>{opcional.Descripcion}</p>
-                    </Col>
+                  pool.Componentes.map((componente, i) => (
+                    <Row className="componente" key={componente.id}>
+                      <Col lg={4}>
+                        {componente.Imagen.url ? (
+                          <img
+                            src={
+                              process.env.REACT_APP_URL_API +
+                              componente.Imagen.url
+                            }
+                            data-aos="zoom-in"
+                            data-aos-offset="100"
+                            alt={componente.Imagen.alternativeText}
+                            className="img-fluid"
+                          ></img>
+                        ) : (
+                          <Loader />
+                        )}
+                      </Col>
+                      <Col lg={8}>
+                        <h4>{componente.Nombre}</h4>
+                        <p>{componente.Descripcion}</p>
+                      </Col>
+                    </Row>
                   ))
                 ) : (
-                  <p>Cargando...</p>
+                  <Loader />
                 )}
-              </Row>
-            </Tab>
-          </Tabs>
+              </Tab>
+              <Tab eventKey="opcionales" title="Opcionales">
+                <Row>
+                  {loadedData ? (
+                    pool.Opcionales.map((opcional, i) => (
+                      <Col lg={4}>
+                        {opcional.Imagen.url ? (
+                          <img
+                            src={
+                              process.env.REACT_APP_URL_API +
+                              opcional.Imagen.url
+                            }
+                            data-aos="zoom-in"
+                            data-aos-offset="100"
+                            alt={opcional.Imagen.alternativeText}
+                            className="imagenOpcional center-block"
+                          ></img>
+                        ) : (
+                          <Loader />
+                        )}
+                        <h4>{opcional.Nombre}</h4>
+                        <p>{opcional.Descripcion}</p>
+                      </Col>
+                    ))
+                  ) : (
+                    <Loader />
+                  )}
+                </Row>
+              </Tab>
+            </Tabs>
+          </Container>
         </Container>
+        <NuestrasPiscinas />
       </Container>
     </>
   );

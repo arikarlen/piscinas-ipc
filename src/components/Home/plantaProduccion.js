@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import axios from "axios";
+import Loader from "../Commons/Loader";
 
 export const PlantaProduccion = () => {
   const [textoProd, settextoProd] = useState([]);
@@ -45,7 +46,7 @@ export const PlantaProduccion = () => {
                   alt={imagenProd.alternativeText}
                 ></img>
               ) : (
-                <p>Cargando imagen</p>
+                <Loader />
               )}
             </div>
           </Col>

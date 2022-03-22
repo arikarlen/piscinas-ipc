@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Card from "./Cards";
 import logoPractipool from "../../assets/LogoPractipool.png";
 import logoStylePool from "../../assets/LogoStylePool.png";
 import logoLuxury from "../../assets/LogoLuxury-2.png";
@@ -21,47 +22,35 @@ export const NuestrasPiscinas = () => {
         </Row>
         <Row id="contentPiscinas" className="text-center">
           <Col lg={4}>
-            <Link to="/page2">
-              <div
-                className="cardsIpc "
-                data-aos="zoom-in "
-                data-aos-offset="200"
-              >
+            <Link to="/practipool/">
+              <Card>
                 <img src={logoPractipool} alt="Practipool"></img>
                 <p>
                   Ver modelos <i className="fas fa-chevron-right"></i>
                 </p>
-              </div>
+              </Card>
             </Link>
           </Col>
 
           <Col lg={4}>
             <Link to="/page2">
-              <div
-                className="cardsIpc"
-                data-aos="zoom-in"
-                data-aos-offset="300"
-              >
+              <Card>
                 <img src={logoStylePool} alt="StylePool"></img>
                 <p>
                   Ver modelos <i className="fas fa-chevron-right"></i>
                 </p>
-              </div>
+              </Card>
             </Link>
           </Col>
 
           <Col lg={4}>
             <Link to="/page2">
-              <div
-                className="cardsIpc"
-                data-aos="zoom-in"
-                data-aos-offset="400"
-              >
+              <Card>
                 <img src={logoLuxury} alt="Logo"></img>
                 <p>
                   Ver modelos <i className="fas fa-chevron-right"></i>
                 </p>
-              </div>
+              </Card>
             </Link>
           </Col>
         </Row>
