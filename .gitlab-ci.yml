@@ -1,0 +1,23 @@
+image: node:16.9.1
+
+cache:
+  paths:
+    - node_modules/
+  
+before_script:
+    - apt-get update -qq 
+    - apt-get install -qq git
+    - apt-get install -qq openssh-client
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY_STAGING" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh 
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'   
+
+deploy:
+  stage: deploy  
+  script:
+   - bash deploy.sh
+  
+  only:
+   - staging
